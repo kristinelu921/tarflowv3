@@ -1,0 +1,8 @@
+{"time":"2025-04-23T05:50:14.107066737Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250422_043736-w2jzeq6g/wandb/run-20250423_055014-42tmslkc/logs/debug-core.log"}
+{"time":"2025-04-23T05:50:14.279436234Z","level":"INFO","msg":"created new stream","id":"42tmslkc"}
+{"time":"2025-04-23T05:50:14.279518642Z","level":"INFO","msg":"stream: started","id":"42tmslkc"}
+{"time":"2025-04-23T05:50:14.279690707Z","level":"INFO","msg":"writer: Do: started","stream_id":"42tmslkc"}
+{"time":"2025-04-23T05:50:14.279955061Z","level":"INFO","msg":"handler: started","stream_id":"42tmslkc"}
+{"time":"2025-04-23T05:50:14.280010333Z","level":"INFO","msg":"sender: started","stream_id":"42tmslkc"}
+{"time":"2025-04-23T05:50:14.513800886Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-23T05:58:58.553503686Z","level":"INFO","msg":"Pausing system monitor"}

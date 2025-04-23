@@ -1,0 +1,54 @@
+_wandb:
+    value:
+        cli_version: 0.19.9
+        m: []
+        python_version: 3.12.7
+        t:
+            "1":
+                - 1
+                - 41
+                - 55
+            "2":
+                - 1
+                - 41
+                - 55
+            "3":
+                - 2
+                - 16
+                - 23
+                - 55
+            "4": 3.12.7
+            "5": 0.19.9
+            "8":
+                - 1
+                - 5
+            "12": 0.19.9
+            "13": linux-x86_64
+architecture:
+    value: Tarflow
+batch_size:
+    value: 1000
+d_model:
+    value: 128
+epochs:
+    value: 10
+img_size:
+    value: 28
+learning_rate_max:
+    value: 0.0001
+learning_rate_min:
+    value: 4e-05
+n_flow_steps:
+    value: 4
+n_heads:
+    value: 4
+n_layers:
+    value: 4
+patch_size:
+    value: 4
+total_training_steps:
+    value: 600
+warmup_steps:
+    value: 120
+weight_decay:
+    value: 0.0001
