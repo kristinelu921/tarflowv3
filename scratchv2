@@ -1,0 +1,594 @@
+!pip install torch
+!pip install numpy
+!pip install matplotlib
+!pip install torchvision
+!pip install torchaudio
+!pip install tqdm
+!pip install wandb
+
+class Config:
+    dataset = "mnist"
+    img_size = 28
+    patch_size = 4
+    n_channels = 1
+    dataset_size = 60000
+
+
+    #patch embed
+    num_patches = (img_size//patch_size)**2
+    d_patch = n_channels * patch_size * patch_size
+
+    #PE
+    max_seq_length = num_patches + 1
+
+    #ViT
+    d_model: int = 128
+    debug: bool = True
+    layer_norm_eps: float = 1e-5
+    init_range: float = 0.02
+    n_layers = 4 #number of transformer layers
+    dropout = 0.1
+    r_mlp = 4 #scales size of intermed. layer
+
+    #AttentionHead
+    n_heads = 4
+    d_head = d_model//n_heads
+
+    #Training
+    epochs = 100
+    mask = True
+    has_scheduler = True
+    batch_size = 256
+    eta_min_scale = 0.0001
+
+    #learning rate scheduler
+    initial_lr = 1e-3
+    weight_decay = 1e-4
+    num_warmup_steps = dataset_size//(batch_size)*epochs/5 #1 epoch
+    total_training_steps = epochs*(dataset_size//batch_size)
+    lr_min = 4e-5
+    lr_max = 1e-4
+
+
+    #tarflow
+    n_flow_steps = 4
+    permutation = True
+
+
+    #noising
+    noise_std = 0.05
+    num_samples = 10
+
+    #evaluation
+    evaluate = False
+    n_classes = 10
+
+    #guidance
+    guidance_on = False
+
+import torch
+import torch.nn as nn
+import numpy as np
+
+#from transformer_config import Config as Config
+
+device = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
+print("device", device)
+
+class LayerNorm(nn.Module):
+    def __init__(self, cfg: Config):
+        super().__init__()
+        self.cfg = cfg
+        self.w = nn.Parameter(torch.ones(cfg.d_model))
+        
+        self.b = nn.Parameter(torch.zeros(cfg.d_model))
+
+    def forward(self, residual):
+        residual_mean = residual.mean(dim = -1, keepdim = True)
+        residual_std = (residual.var(dim = -1, keepdim = True, unbiased = False) + self.cfg.layer_norm_eps).sqrt()
+
+        residual = (residual - residual_mean) / residual_std
+        return residual * self.w + self.b
+
+class PatchEmbed(nn.Module):
+    """
+    Input: Image: float[Tensor, (bsize, channels, height, width)]
+    Output: Embedding: float[Tensor, (bsize, flattened_patch, d_model)]
+
+    Transforms an image into a learnable embedding (d_model dimensions) for each patch
+
+    Section 2.4: Reshape image to patches
+    B x C x H x W -> B x (HW/P_size^2) x (P_size^2 x C)
+
+    Paper doesn't give an invertible way to linear project the patches to the d_model dimension, so in this implementation we use an invertible linear projection
+
+    """
+    def __init__(self, cfg: Config):
+
+        super().__init__()
+        self.d_model = cfg.d_model #dim of each patch embedding (EG: 768 for a 768-dim vector)
+        self.img_size = cfg.img_size #size of input (h, w) (EG: 224 for a 224 x 224 image)
+        self.patch_size = cfg.patch_size #size of each patch (EG: 16 for a 16 x 16 patch)
+        self.n_channels = cfg.n_channels #number of channels (EG: 3 for RGB)
+        self.batch_size = cfg.batch_size
+        self.cfg = cfg
+
+    def add_noise(self, images, cfg):
+        """
+        Adds noise to the images for training
+        images: (bsize, channels, height, width)
+        cfg: transformer config
+        std: standard dev of the noise
+        """
+        std = cfg.noise_std
+        noise = torch.randn_like(images) * std
+        noisy_images = images + noise
+        return noisy_images
+
+    def forward(self, img):
+        """
+        Transforms an image into patches
+        Input: Image: float[Tensor, (bsize, channels, height, width)]
+        Output: Patches: float[Tensor, (bsize, num_patches, d_patch)]
+        """
+        img = self.add_noise(img, self.cfg)
+        patches = torch.nn.functional.unfold(img, self.patch_size, stride = self.patch_size) #b c h w -> b #patches, d_patch
+        return patches.transpose(1, 2)
+
+    def reverse(self, patches):
+        """
+        Transforms patches back into an image
+        Input: Patches: float[Tensor, (bsize, num_patches, d_patch)]
+        Output: Image: float[Tensor, (bsize, channels, height, width)]
+        """
+        batch_size, num_patches, _ = patches.shape
+
+        num_patches_h = int(np.sqrt(num_patches))
+        num_patches_w = num_patches_h
+
+        patches = patches.reshape(
+            batch_size,
+            num_patches_h,
+            num_patches_w,
+            self.n_channels,
+            self.patch_size,
+            self.patch_size
+        )
+
+        patches = patches.permute(0, 3, 1, 4, 2, 5)
+
+        img = patches.reshape(
+            batch_size,
+            self.n_channels,
+            num_patches_h * self.patch_size,
+            num_patches_w * self.patch_size
+        )
+
+        return img
+
+
+
+class AttentionHead(nn.Module):
+    """
+    Input: Embeddings: (bsize patch dmodel)
+    Output: Attention output: (bsize patch dmodel)
+    Performs one attention head
+    """
+    def __init__(self, cfg: Config):
+        super().__init__()
+
+        self.query = nn.Linear(cfg.d_model, cfg.d_head)
+        self.key = nn.Linear(cfg.d_model, cfg.d_head)
+        self.value = nn.Linear(cfg.d_model, cfg.d_head)
+        self.output = nn.Linear(cfg.d_head, cfg.d_model)
+        self.cfg = cfg
+        self.register_buffer("IGNORE", torch.tensor(-float('inf')))
+        self.temp  = 1.0 #guidance in 2.6
+
+    def forward(self, embeddings, temp = None):  #bsize patch dmodel (embeddings)
+        """
+        Takes in embeddings: (bsize patch dmodel)
+        """
+
+        temp = temp if temp is not None else self.temp
+
+        # Calculate query, key and value vectors
+        Q = self.query(embeddings)  #bsize patch dmodel -> bsize patch dhead
+        K = self.key(embeddings) #bsize patch dmodel -> bsize patch dhead
+        V = self.value(embeddings) #bsize patch dmodel -> bsize patch dhead
+
+        # Calculate attention scores, then scale and mask, and apply softmax to get probabilities
+        attn_scores = Q @ K.transpose(-1, -2) # -> bsize patch_q patch_k
+        attn_scores_scaled = attn_scores / self.cfg.d_head**0.5
+
+        if self.cfg.mask:
+            attn_scores_masked = self.apply_causal_mask(attn_scores_scaled) #scaled
+            attn_pattern = attn_scores_masked.softmax(-1) #softmaxed #bsize patch_q patch_k
+        else:
+            attn_pattern = attn_scores.softmax(-1)
+
+        attn_out = attn_pattern @ V #bsize patch_q dhead
+
+        return attn_out
+
+    def apply_causal_mask(self, attn_scores):
+        """
+        Applies a causal mask to attention scores, and returns masked scores.
+        """
+        # Define a mask that is True for all positions we want to set probabilities to zero for
+        all_ones = torch.ones(attn_scores.size(-2), attn_scores.size(-1), device=attn_scores.device)
+        mask = torch.triu(all_ones, diagonal=1).bool()
+        # Apply the mask to attention scores, then return the masked scores
+        attn_scores.masked_fill_(mask, self.IGNORE) #IGNORE is -inf
+        return attn_scores
+
+
+class MultiHeadAttention(nn.Module):
+    """
+    Input: Embeddings: (bsize patch dmodel)
+    Output: Attention output: (bsize patch dmodel)
+    Performs multi-head attention
+    """
+    def __init__(self, cfg):
+        super().__init__()
+        self.d_model = cfg.d_model
+        self.n_heads = cfg.n_heads
+        self.d_head = cfg.d_head
+
+        self.W_o = nn.Linear(self.d_model, self.d_model)
+
+        #pass each through one attn head to get attn scores
+        self.heads = nn.ModuleList([AttentionHead(cfg) for _ in range(self.n_heads)])
+
+    def forward(self, embeddings): #B, patches, d_model
+        out = torch.cat([head(embeddings) for head in self.heads], dim = -1)
+        out = self.W_o(out) #B, patches, d_model
+        return out
+
+class TransformerEncoder(nn.Module):
+    """
+    Input: Embeddings: (bsize patch dmodel)
+    Output: Encoded Embeddings: (bsize patch dmodel)
+    Performs one transformer encoder layer
+    """
+    def __init__(self, cfg: Config):
+        super().__init__()
+        self.d_model = cfg.d_model
+        self.n_heads = cfg.n_heads
+        self.dropout = nn.Dropout(cfg.dropout)
+        self.ln1 = LayerNorm(cfg)
+        self.mha = MultiHeadAttention(cfg)
+        self.ln2 = LayerNorm(cfg)
+        self.mlp = nn.Sequential(
+            nn.Linear(cfg.d_model, cfg.d_model * cfg.r_mlp),
+            nn.GELU(),
+            nn.Linear(cfg.d_model*cfg.r_mlp, cfg.d_model)
+        )
+
+    def forward(self, embeddings):
+        out = embeddings + self.mha(self.ln1(embeddings))
+        #out = self.dropout(out)
+        out = out + self.mlp(self.ln2(out))
+        return out
+
+class Permutation(nn.Module): #post patch embedding
+    """
+    Creates the permutation function (reversal) following p.3 in paper
+    """
+    def __init__(self): #batch_size, num_patches, d_model
+        super().__init__()
+
+    def forward(self, x): #batch_size, num_patches, d_model
+        raise NotImplementedError("Override me")
+
+class PermutationIdentity(Permutation):
+    def forward(self, x):
+        return x
+
+class PermutationFlip(Permutation):
+    def forward(self, x):
+        return torch.flip(x, dims = [1])
+    
+
+
+class TransformerFlowBlock(nn.Module):
+    """
+    Runs a transformer encoder that learns one flow step, then applies the affine transform
+    Follows flow step in eq. 3 in paper
+
+    Input: Images: (bsize, numpatches, d patch)
+    Output: Transformed Embeddings: (bsize, num_patches, d_patch)
+    """
+    def __init__(self, cfg, block_id, permutation):
+        super().__init__()
+        self.block_id = block_id
+        cfg.mask = True
+
+
+        assert cfg.img_size % cfg.patch_size == 0  #assume working with square patches
+        assert cfg.d_model % cfg.n_heads == 0
+
+        self.transformer_encoder = nn.ModuleList([TransformerEncoder(cfg) for _ in range(cfg.n_layers)])
+        self.proj_to_model = nn.Linear(cfg.d_patch, cfg.d_model)
+        self.proj_to_patch = nn.Linear(cfg.d_model, 2*cfg.d_patch)
+        torch.nn.init.zeros_(self.proj_to_patch.weight)
+        torch.nn.init.zeros_(self.proj_to_patch.bias)
+
+
+        self.permutation = permutation
+        self.pos_embed = nn.Parameter(torch.randn(cfg.num_patches, cfg.d_model)*1e-2)
+
+
+    def forward(self, z_t, temp = None, uncond_out = None): #batch_size, num_patches, d_model
+        z_t = self.permutation(z_t)
+        z_t_in = z_t
+        z_t = self.proj_to_model(z_t) + self.pos_embed
+
+        for layer in self.transformer_encoder:
+            z_t = layer(z_t)
+
+        z_t = self.proj_to_patch(z_t) #project back to patch dimension
+        z_t = torch.cat([torch.zeros_like(z_t[:, :1]), z_t[:, :-1]], dim = 1)
+        #this shifts all columns to the right by 1, so that the "next" token is in first col
+        #print("z_t size", z_t.size())
+        alpha, mu = z_t.chunk(2, dim = -1)
+        #print("mu, alpha size", mu.size())
+
+        z_t1 = z_t_in * torch.exp(-alpha) + mu
+        return self.permutation(z_t1), -alpha.mean() #next, alpha is log det
+
+    def get_reverse_transform(self, z_t1, i): #i is the ith-patch, we only need the transformer weights of ith patch
+        z_t1 = z_t1[:, i:i+1] #getting the ith patch (batch size, 1, d_patch)
+        z_t1 = self.proj_to_model(z_t1) + self.pos_embed[i: i+1] #(batch_size, 1, d_model)
+
+        for block in self.transformer_encoder:
+            z_t1 = block(z_t1) #(batch_size, 1, d_model)
+
+        z_t1 = self.proj_to_patch(z_t1) #(batch_size, 1, d_patch)
+        alpha, mu = z_t1.chunk(2, dim = -1) #(batch_size, 1, d_patch/2)
+        return alpha, mu
+
+    def reverse(self, z_t1): #i is the ith patch
+        z_t1 = self.permutation(z_t1) #(batch_size, num_patches, d_patch)
+        for i in range(z_t1.size(1) - 1):
+            alpha, mu = self.get_reverse_transform(z_t1, i) #(batch size, 1, d_patch/2)
+            scale = alpha[:, 0] #(batch_size, d_patch/2) #removes seq dimension
+            z_t1[:, i+1] = (z_t1[:, i+1]) * torch.exp(-scale) + mu[:, 0] #(batch_size, d_patch) * (batch_size, d_patch/2)
+        return self.permutation(z_t1)
+
+
+class Tarflow(nn.Module):
+    """
+    Puts together all flow steps + transformer architecture
+    Following figure 2 in paper
+
+    Input: Images: (bsize, channels, height, width)
+    Output: latent space image: (bsize, num_patches, channels * height * width)
+    """
+    def __init__(self, cfg):
+        super().__init__()
+        self.cfg = cfg
+        self.patch_embedding = PatchEmbed(cfg)
+        permutations = [PermutationIdentity(), PermutationFlip()]
+        self.transformer_flow_blocks = nn.ModuleList([TransformerFlowBlock(cfg, block_id = i, permutation = permutations[i%2]) for i in range(cfg.n_flow_steps)])
+
+    def encode(self, images):
+        log_dets = torch.zeros((), device = images.device) #the logdet of each flowstep
+        outputs = [] #all the outputs of each flowstep
+        x = self.patch_embedding(images)
+        for i in range(len(self.transformer_flow_blocks)):
+            block = self.transformer_flow_blocks[i]
+            x, logdet = block(x)
+            log_dets = log_dets + logdet
+            outputs.append(x)
+
+        return x, outputs, log_dets
+
+    def loss(self, x, log_dets):
+        """
+        Following loss function (eq. 6) in the paper,
+        L = 0.5 * ||x||^2 + sum of alphas
+        """
+        prior_loss = 0.5 * (x**2).mean()
+        logdet_loss = - log_dets.mean()
+        print("logdet loss", logdet_loss, "prior loss", prior_loss)
+        return logdet_loss, prior_loss, prior_loss + logdet_loss
+
+    def decode(self, z, temp=1.0):
+        for block in reversed(self.transformer_flow_blocks):
+            z = block.reverse(z)
+        z = self.patch_embedding.reverse(z)
+        return z
+
+import torch
+import torchvision.transforms as T
+from torch.optim import AdamW
+from torchvision.datasets.mnist import MNIST
+from torch.utils.data import DataLoader
+from tqdm import tqdm
+import wandb
+
+def init_wandb(cfg):
+    """Initialize wandb with config parameters"""
+    wandb.init(
+        project="tarflow",
+        config={
+            "learning_rate_min": cfg.lr_min,
+            "learning_rate_max": cfg.lr_max,
+            "batch_size": cfg.batch_size,
+            "epochs": cfg.epochs,
+            "weight_decay": cfg.weight_decay,
+            "n_flow_steps": cfg.n_flow_steps,
+            "n_layers": cfg.n_layers,
+            "d_model": cfg.d_model,
+            "n_heads": cfg.n_heads,
+            "patch_size": cfg.patch_size,
+            "img_size": cfg.img_size,
+            "warmup_steps": cfg.num_warmup_steps,
+            "total_training_steps": cfg.total_training_steps,
+            "architecture": "Tarflow"
+        }
+    )
+
+def log_noise(noise):
+    """Log noise to wandb"""
+    wandb.log({
+        "noise": [wandb.Image(img) for img in noise[:8].cuda()],
+    })
+  
+def log_epoch(reconstructed_images, epoch, step = 2):
+    """Log epoch to wandb"""
+    if epoch % step == 0:
+      wandb.log({
+          f"Epoch {epoch}": [wandb.Image(img) for img in reconstructed_images[:8].cuda()],
+      })
+    else:
+       pass
+
+def final_images(noise, reconstructed_images):
+    """Log images to wandb"""
+    wandb.log({
+        "noise": [wandb.Image(img) for img in noise[:8].cuda()],
+        "reconstructed_images": [wandb.Image(img) for img in reconstructed_images[:8].cuda()],
+    })
+
+cfg = Config()
+
+def train_model(model, config): #mnist trainer
+
+  cfg  = config
+  run = init_wandb(cfg)        
+  img_size = (cfg.img_size, cfg.img_size)
+  batch_size = cfg.batch_size
+  epochs = cfg.epochs
+
+  transform = T.Compose([
+    T.Resize(img_size),
+    T.ToTensor()
+  ])
+
+  train_set = MNIST(
+    root="./../datasets", train=True, download=True, transform=transform
+  )
+  test_set = MNIST(
+    root="./../datasets", train=False, download=True, transform=transform
+  )
+
+  train_loader = DataLoader(train_set, shuffle=True, batch_size=batch_size)
+  test_loader = DataLoader(test_set, shuffle=False, batch_size=batch_size)
+
+  device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+  print("Using device: ", device, f"({torch.cuda.get_device_name(device)})" if torch.cuda.is_available() else "")
+
+  my_model =  model.to(device)
+
+  optimizer = AdamW(my_model.parameters(),
+                    lr=cfg.lr_max, weight_decay = cfg.weight_decay, betas = (0.9, 0.95))
+
+  scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda = make_cosine_warmup_lambda(cfg))
+
+  loss_fn = my_model.loss
+
+  patch_embed = PatchEmbed(cfg).to(device)
+
+  def log_metrics(loss, epoch, step, logdet_loss, gaussian_loss, lr=None):
+    """Log metrics to wandb"""
+    metrics = {
+        "loss": loss,
+        "epoch": epoch,
+        "step": step,
+        "logdet loss": logdet_loss,
+        "gaussian loss": gaussian_loss
+    }
+    if lr is not None:
+        metrics["learning_rate"] = lr
+    wandb.log(metrics)
+
+
+  #noise
+  z = torch.randn(cfg.num_samples, cfg.num_patches, cfg.d_patch, device = device)
+  log_noise(patch_embed.reverse(z))
+
+  for epoch in tqdm(range(epochs), desc="Epochs"):
+    model.train()
+    training_loss = 0.0
+    for i, data in enumerate(tqdm(train_loader, desc="Training", leave=False), 0):
+        inputs, _ = data
+        inputs = inputs.to(device)
+
+        optimizer.zero_grad()
+
+        outputs, alphas, log_dets = my_model.encode(inputs)
+        logdet_loss, gaussian_loss, loss = loss_fn(outputs, log_dets)
+        loss.backward()
+        optimizer.step()
+
+        if cfg.has_scheduler:
+            scheduler.step()
+
+        training_loss += loss.item()
+
+        if i % 1 == 0:  # log every batch
+            current_lr = optimizer.param_groups[0]["lr"]
+            print(f'  Batch {i}/{len(train_loader)}, Loss: {loss.item():.4f}, LR: {current_lr:.10f}')
+            log_metrics(loss.item(), epoch, epoch * len(train_loader) + i, logdet_loss, gaussian_loss, lr=current_lr)
+
+
+    print(f'Epoch {epoch + 1}/{epochs} loss: {training_loss  / len(train_loader) :.3f}')
+
+    model.eval()
+
+    with torch.no_grad():
+        generated_images = model.decode(z)
+        log_epoch(generated_images, epoch)
+
+    cfg = model.cfg
+
+
+  with torch.no_grad():
+      generated_images = model.decode(z)
+
+  final_images(patch_embed.reverse(z), generated_images)
+
+  wandb.finish()
+
+  return generated_images
+
+  correct = 0
+  total = 0
+
+  if cfg.evaluate:
+    with torch.no_grad():
+      for data in tqdm(test_loader, desc="Testing", leave = False):
+        images, labels = data
+      images, labels = images.to(device), labels.to(device)
+
+      outputs = my_model(images)
+
+      _, predicted = torch.max(outputs.data, 1)
+      total += labels.size(0)
+      correct += (predicted == labels).sum().item()
+    print(f'\nModel Accuracy: {100 * correct // total} %')
+
+import math
+
+def make_cosine_warmup_lambda(cfg):
+  base_lr = cfg.lr_max
+  T_warmup = cfg.num_warmup_steps
+  T_total = cfg.total_training_steps
+
+  def lr_lambda(step):
+    if step < T_warmup:
+      lr = cfg.lr_min + (cfg.lr_max - cfg.lr_min)*step/T_warmup
+    else:
+      progress = (step - T_warmup)/max(1, T_total - T_warmup)
+      cosine_decay = 0.5*(1 + math.cos(math.pi*progress))
+      lr = cfg.lr_min + (cfg.lr_max - cfg.lr_min)*cosine_decay
+
+    return lr/base_lr
+
+  return lr_lambda
+
+
+if __name__ == "__main__":
+  train_model(Tarflow(cfg), cfg)
