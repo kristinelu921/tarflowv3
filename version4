@@ -207,6 +207,13 @@ class AttentionHead(nn.Module):
             #print("Q size", Q.size())
             #print("K size", K.size())
 
+            attn_scores = Q @ K.transpose(-1, -2) # -> bsize patch_q patch_k
+            attn_scores_scaled = attn_scores / self.cfg.d_head**0.5
+            attn_out = attn_pattern @ V #bsize patch_q dhead
+            return attn_out
+            
+
+
         # Calculate attention scores, then scale and mask, and apply softmax to get probabilities
         attn_scores = Q @ K.transpose(-1, -2) # -> bsize patch_q patch_k
         attn_scores_scaled = attn_scores / self.cfg.d_head**0.5
