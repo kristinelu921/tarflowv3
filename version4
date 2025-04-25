@@ -209,7 +209,7 @@ class AttentionHead(nn.Module):
 
             attn_scores = Q @ K.transpose(-1, -2) # -> bsize patch_q patch_k
             attn_scores_scaled = attn_scores / self.cfg.d_head**0.5
-            attn_out = attn_pattern @ V #bsize patch_q dhead
+            attn_out = attn_scores.softmax(-1) @ V #bsize patch_q dhead
             return attn_out
             
 
