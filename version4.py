@@ -6,6 +6,7 @@
 !pip install tqdm
 !pip install wandb
 
+
 class Config:
     dataset = "mnist"
     img_size = 28
@@ -80,7 +81,7 @@ class LayerNorm(nn.Module):
         super().__init__()
         self.cfg = cfg
         self.w = nn.Parameter(torch.ones(cfg.d_model))
-        
+
         self.b = nn.Parameter(torch.zeros(cfg.d_model))
 
     def forward(self, residual):
@@ -198,7 +199,7 @@ class AttentionHead(nn.Module):
         Q = self.query(embeddings)  #bsize patch dmodel -> bsize patch dhead
         K = self.key(embeddings) #bsize patch dmodel -> bsize patch dhead
         V = self.value(embeddings) #bsize patch dmodel -> bsize patch dhead
-        
+
         if cache:
             self.cache["key"].append(K)
             self.cache["value"].append(V)
@@ -211,7 +212,7 @@ class AttentionHead(nn.Module):
             attn_scores_scaled = attn_scores / self.cfg.d_head**0.5
             attn_out = attn_scores.softmax(-1) @ V #bsize patch_q dhead
             return attn_out
-            
+
 
 
         # Calculate attention scores, then scale and mask, and apply softmax to get probabilities
@@ -305,7 +306,7 @@ class PermutationIdentity(Permutation):
 class PermutationFlip(Permutation):
     def forward(self, x):
         return torch.flip(x, dims = [1])
-    
+
 
 
 class TransformerFlowBlock(nn.Module):
@@ -452,7 +453,7 @@ def log_noise(noise):
     wandb.log({
         "noise": [wandb.Image(img) for img in noise[:8].cuda()],
     })
-  
+
 def log_epoch(reconstructed_images, epoch, step = 2):
     """Log epoch to wandb"""
     if epoch % step == 0:
@@ -474,7 +475,7 @@ cfg = Config()
 def train_model(model, config): #mnist trainer
 
   cfg  = config
-  run = init_wandb(cfg)        
+  run = init_wandb(cfg)
   img_size = (cfg.img_size, cfg.img_size)
   batch_size = cfg.batch_size
   epochs = cfg.epochs
