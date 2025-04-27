@@ -1,0 +1,22 @@
+{"time":"2025-04-27T22:32:01.190892543Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250427_223200-kk9fzpdp/logs/debug-core.log"}
+{"time":"2025-04-27T22:32:01.33947962Z","level":"INFO","msg":"created new stream","id":"kk9fzpdp"}
+{"time":"2025-04-27T22:32:01.339523414Z","level":"INFO","msg":"stream: started","id":"kk9fzpdp"}
+{"time":"2025-04-27T22:32:01.339606926Z","level":"INFO","msg":"writer: Do: started","stream_id":"kk9fzpdp"}
+{"time":"2025-04-27T22:32:01.339652789Z","level":"INFO","msg":"handler: started","stream_id":"kk9fzpdp"}
+{"time":"2025-04-27T22:32:01.339627025Z","level":"INFO","msg":"sender: started","stream_id":"kk9fzpdp"}
+{"time":"2025-04-27T22:32:01.443120383Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-27T22:32:15.490703869Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:32:28.922589512Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:32:28.963588195Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:32:29.417623392Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:32:29.419911829Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:34:23.515424776Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:34:23.567076402Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-27T22:34:23.567190144Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-27T22:34:23.956970709Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-27T22:34:24.028177351Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-27T22:34:24.03699025Z","level":"INFO","msg":"stream: closing","id":"kk9fzpdp"}
+{"time":"2025-04-27T22:34:24.037033839Z","level":"INFO","msg":"handler: closed","stream_id":"kk9fzpdp"}
+{"time":"2025-04-27T22:34:24.037052633Z","level":"INFO","msg":"writer: Close: closed","stream_id":"kk9fzpdp"}
+{"time":"2025-04-27T22:34:24.037113092Z","level":"INFO","msg":"sender: closed","stream_id":"kk9fzpdp"}
+{"time":"2025-04-27T22:34:24.0371658Z","level":"INFO","msg":"stream: closed","id":"kk9fzpdp"}

@@ -1,0 +1,10 @@
+{"time":"2025-04-27T22:59:01.063119769Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250427_225900-ax6kaxd7/logs/debug-core.log"}
+{"time":"2025-04-27T22:59:01.213245634Z","level":"INFO","msg":"created new stream","id":"ax6kaxd7"}
+{"time":"2025-04-27T22:59:01.213332416Z","level":"INFO","msg":"stream: started","id":"ax6kaxd7"}
+{"time":"2025-04-27T22:59:01.21343266Z","level":"INFO","msg":"sender: started","stream_id":"ax6kaxd7"}
+{"time":"2025-04-27T22:59:01.213420895Z","level":"INFO","msg":"writer: Do: started","stream_id":"ax6kaxd7"}
+{"time":"2025-04-27T22:59:01.213472663Z","level":"INFO","msg":"handler: started","stream_id":"ax6kaxd7"}
+{"time":"2025-04-27T22:59:01.31925425Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-27T23:01:17.907435434Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T23:02:32.871061891Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T23:02:32.9116278Z","level":"INFO","msg":"Pausing system monitor"}

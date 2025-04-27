@@ -1,0 +1,54 @@
+2025-04-27 22:23:10,187 INFO    MainThread:2956845 [wandb_init.py:setup_run_log_directory():662] Logging user logs to /home/user/kristine/wandb/run-20250427_222310-g25ki8ht/logs/debug.log
+2025-04-27 22:23:10,187 INFO    MainThread:2956845 [wandb_init.py:setup_run_log_directory():663] Logging internal logs to /home/user/kristine/wandb/run-20250427_222310-g25ki8ht/logs/debug-internal.log
+2025-04-27 22:23:10,187 INFO    MainThread:2956845 [wandb_init.py:monkeypatch_ipython():581] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x776328943e00>
+2025-04-27 22:23:10,187 INFO    MainThread:2956845 [wandb_init.py:init():781] calling init triggers
+2025-04-27 22:23:10,187 INFO    MainThread:2956845 [wandb_init.py:init():786] wandb.init called with sweep_config: {}
+config: {'learning_rate_min': 4e-05, 'learning_rate_max': 0.0001, 'batch_size': 4000, 'epochs': 100, 'weight_decay': 0.0001, 'n_flow_steps': 4, 'n_layers': 4, 'd_model': 128, 'n_heads': 4, 'patch_size': 4, 'img_size': 28, 'warmup_steps': 300.0, 'total_training_steps': 1500, 'architecture': 'Tarflow', '_wandb': {}}
+2025-04-27 22:23:10,188 INFO    MainThread:2956845 [wandb_init.py:init():798] finishing previous run: pu0e13ux
+2025-04-27 22:23:10,560 INFO    MainThread:2956845 [wandb_init.py:init():809] starting backend
+2025-04-27 22:23:10,561 INFO    MainThread:2956845 [wandb_init.py:init():813] sending inform_init request
+2025-04-27 22:23:10,563 INFO    MainThread:2956845 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-04-27 22:23:10,563 INFO    MainThread:2956845 [wandb_init.py:init():823] backend started and connected
+2025-04-27 22:23:10,568 INFO    MainThread:2956845 [wandb_run.py:_label_probe_notebook():1267] probe notebook
+2025-04-27 22:23:10,573 INFO    MainThread:2956845 [wandb_init.py:init():915] updated telemetry
+2025-04-27 22:23:10,581 INFO    MainThread:2956845 [wandb_init.py:init():939] communicating run to backend with 90.0 second timeout
+2025-04-27 22:23:10,887 INFO    MainThread:2956845 [wandb_init.py:init():1014] starting run threads in backend
+2025-04-27 22:23:11,151 INFO    MainThread:2956845 [wandb_run.py:_console_start():2454] atexit reg
+2025-04-27 22:23:11,154 INFO    MainThread:2956845 [wandb_run.py:_redirect():2306] redirect: wrap_raw
+2025-04-27 22:23:11,154 INFO    MainThread:2956845 [wandb_run.py:_redirect():2371] Wrapping output streams.
+2025-04-27 22:23:11,154 INFO    MainThread:2956845 [wandb_run.py:_redirect():2394] Redirects installed.
+2025-04-27 22:23:11,155 INFO    MainThread:2956845 [wandb_init.py:init():1056] run started, returning control to user process
+2025-04-27 22:23:24,209 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-27 22:23:24,209 INFO    MainThread:2956845 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
+2025-04-27 22:23:41,643 INFO    MainThread:2956845 [wandb_init.py:_resume_backend():551] [no run ID] resuming backend
+2025-04-27 22:23:41,655 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-27 22:23:41,655 INFO    MainThread:2956845 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
+2025-04-27 22:23:42,181 INFO    MainThread:2956845 [wandb_init.py:_resume_backend():551] [no run ID] resuming backend
+2025-04-27 22:23:42,194 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-27 22:23:42,194 INFO    MainThread:2956845 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
+2025-04-27 22:23:42,485 INFO    MainThread:2956845 [wandb_init.py:_resume_backend():551] [no run ID] resuming backend
+2025-04-27 22:23:42,505 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-27 22:23:42,505 INFO    MainThread:2956845 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
+2025-04-27 22:23:42,929 INFO    MainThread:2956845 [wandb_init.py:_resume_backend():551] [no run ID] resuming backend
+2025-04-27 22:23:42,944 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-27 22:23:42,949 INFO    MainThread:2956845 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
+2025-04-27 22:23:44,921 INFO    MainThread:2956845 [wandb_init.py:_resume_backend():551] [no run ID] resuming backend
+2025-04-27 22:23:44,933 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-27 22:23:44,933 INFO    MainThread:2956845 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
+2025-04-27 22:23:45,844 INFO    MainThread:2956845 [wandb_init.py:_resume_backend():551] [no run ID] resuming backend
+2025-04-27 22:23:45,857 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-27 22:23:45,857 INFO    MainThread:2956845 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
+2025-04-27 22:24:04,041 INFO    MainThread:2956845 [wandb_init.py:_resume_backend():551] [no run ID] resuming backend
+2025-04-27 22:24:04,056 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-27 22:24:04,057 INFO    MainThread:2956845 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
+2025-04-27 22:24:04,924 INFO    MainThread:2956845 [wandb_init.py:_resume_backend():551] [no run ID] resuming backend
+2025-04-27 22:24:05,000 INFO    MainThread:2956845 [wandb_run.py:_finish():2189] finishing run kaynelu921-massachusetts-institute-of-technology/tarflow/g25ki8ht
+2025-04-27 22:24:05,000 INFO    MainThread:2956845 [jupyter.py:save_history():460] not saving jupyter history
+2025-04-27 22:24:05,000 INFO    MainThread:2956845 [jupyter.py:save_ipynb():384] not saving jupyter notebook
+2025-04-27 22:24:05,000 INFO    MainThread:2956845 [wandb_init.py:_jupyter_teardown():563] cleaning up jupyter logic
+2025-04-27 22:24:05,000 INFO    MainThread:2956845 [wandb_run.py:_atexit_cleanup():2419] got exitcode: 0
+2025-04-27 22:24:05,000 INFO    MainThread:2956845 [wandb_run.py:_restore():2401] restore
+2025-04-27 22:24:05,001 INFO    MainThread:2956845 [wandb_run.py:_restore():2407] restore done
+2025-04-27 22:24:05,516 INFO    MainThread:2956845 [wandb_run.py:_footer_history_summary_info():4064] rendering history
+2025-04-27 22:24:05,516 INFO    MainThread:2956845 [wandb_run.py:_footer_history_summary_info():4096] rendering summary
+2025-04-27 22:24:05,518 INFO    MainThread:2956845 [wandb_run.py:_footer_sync_info():4025] logging synced files

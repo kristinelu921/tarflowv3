@@ -1,0 +1,20 @@
+{"time":"2025-04-27T22:37:34.864917088Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250427_223734-crzsex12/logs/debug-core.log"}
+{"time":"2025-04-27T22:37:35.013197613Z","level":"INFO","msg":"created new stream","id":"crzsex12"}
+{"time":"2025-04-27T22:37:35.013235788Z","level":"INFO","msg":"stream: started","id":"crzsex12"}
+{"time":"2025-04-27T22:37:35.013370054Z","level":"INFO","msg":"writer: Do: started","stream_id":"crzsex12"}
+{"time":"2025-04-27T22:37:35.013461242Z","level":"INFO","msg":"handler: started","stream_id":"crzsex12"}
+{"time":"2025-04-27T22:37:35.013528284Z","level":"INFO","msg":"sender: started","stream_id":"crzsex12"}
+{"time":"2025-04-27T22:37:35.157143418Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-27T22:37:49.890633217Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:45:29.280106525Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:45:29.320626171Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:45:31.303497325Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:45:31.38107225Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-27T22:45:31.381137837Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-27T22:45:31.656325962Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-27T22:45:31.74469272Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-27T22:45:31.752943608Z","level":"INFO","msg":"stream: closing","id":"crzsex12"}
+{"time":"2025-04-27T22:45:31.752982652Z","level":"INFO","msg":"handler: closed","stream_id":"crzsex12"}
+{"time":"2025-04-27T22:45:31.753006976Z","level":"INFO","msg":"sender: closed","stream_id":"crzsex12"}
+{"time":"2025-04-27T22:45:31.753000152Z","level":"INFO","msg":"writer: Close: closed","stream_id":"crzsex12"}
+{"time":"2025-04-27T22:45:31.753112335Z","level":"INFO","msg":"stream: closed","id":"crzsex12"}

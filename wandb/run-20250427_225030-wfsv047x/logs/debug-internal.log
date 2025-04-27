@@ -1,0 +1,26 @@
+{"time":"2025-04-27T22:50:31.3601175Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250427_225030-wfsv047x/logs/debug-core.log"}
+{"time":"2025-04-27T22:50:31.507867455Z","level":"INFO","msg":"created new stream","id":"wfsv047x"}
+{"time":"2025-04-27T22:50:31.507929863Z","level":"INFO","msg":"stream: started","id":"wfsv047x"}
+{"time":"2025-04-27T22:50:31.507989088Z","level":"INFO","msg":"handler: started","stream_id":"wfsv047x"}
+{"time":"2025-04-27T22:50:31.508016999Z","level":"INFO","msg":"sender: started","stream_id":"wfsv047x"}
+{"time":"2025-04-27T22:50:31.507994192Z","level":"INFO","msg":"writer: Do: started","stream_id":"wfsv047x"}
+{"time":"2025-04-27T22:50:31.665174012Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-27T22:50:45.413105327Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:55:03.981548204Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:55:04.021935818Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:55:05.618136936Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:55:05.633792085Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:55:27.034584535Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:55:27.07463248Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:55:31.313445995Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:55:31.328518948Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:55:33.24763482Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:55:33.32348914Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-27T22:55:33.32360124Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-27T22:55:33.685072441Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-27T22:55:33.79093811Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-27T22:55:33.799106066Z","level":"INFO","msg":"stream: closing","id":"wfsv047x"}
+{"time":"2025-04-27T22:55:33.799146626Z","level":"INFO","msg":"handler: closed","stream_id":"wfsv047x"}
+{"time":"2025-04-27T22:55:33.799179477Z","level":"INFO","msg":"sender: closed","stream_id":"wfsv047x"}
+{"time":"2025-04-27T22:55:33.799164941Z","level":"INFO","msg":"writer: Close: closed","stream_id":"wfsv047x"}
+{"time":"2025-04-27T22:55:33.799316401Z","level":"INFO","msg":"stream: closed","id":"wfsv047x"}

@@ -1,0 +1,36 @@
+Using device:  cuda (NVIDIA H100 80GB HBM3)
+Epochs:   0%|          | 0/100 [00:00<?, ?it/s]
+                                                         
+logdet loss tensor(-0., device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0571, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 0/15, Loss: 0.0571, LR: 0.0000402000
+logdet loss tensor(-0.0193, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0573, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 1/15, Loss: 0.0381, LR: 0.0000404000
+logdet loss tensor(-0.0399, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0569, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 2/15, Loss: 0.0171, LR: 0.0000406000
+logdet loss tensor(-0.0621, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0583, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 3/15, Loss: -0.0038, LR: 0.0000408000
+logdet loss tensor(-0.0860, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0592, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 4/15, Loss: -0.0268, LR: 0.0000410000
+logdet loss tensor(-0.1119, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0613, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 5/15, Loss: -0.0506, LR: 0.0000412000
+logdet loss tensor(-0.1396, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0647, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 6/15, Loss: -0.0749, LR: 0.0000414000
+logdet loss tensor(-0.1694, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0678, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 7/15, Loss: -0.1016, LR: 0.0000416000
+logdet loss tensor(-0.2016, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0728, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 8/15, Loss: -0.1288, LR: 0.0000418000
+logdet loss tensor(-0.2361, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0779, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 9/15, Loss: -0.1582, LR: 0.0000420000
+logdet loss tensor(-0.2733, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0847, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 10/15, Loss: -0.1886, LR: 0.0000422000
+logdet loss tensor(-0.3131, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0920, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 11/15, Loss: -0.2212, LR: 0.0000424000
+logdet loss tensor(-0.3550, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0992, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 12/15, Loss: -0.2558, LR: 0.0000426000
+logdet loss tensor(-0.4004, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.1092, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 13/15, Loss: -0.2912, LR: 0.0000428000
+logdet loss tensor(-0.4487, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.1196, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 14/15, Loss: -0.3292, LR: 0.0000430000
+Epoch 1/100 loss: -0.115
+z_t1 right before torch.Size([10, 1, 128])
+device cuda

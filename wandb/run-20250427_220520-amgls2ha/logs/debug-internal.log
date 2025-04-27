@@ -1,0 +1,20 @@
+{"time":"2025-04-27T22:05:21.117872844Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250427_220520-amgls2ha/logs/debug-core.log"}
+{"time":"2025-04-27T22:05:21.262923249Z","level":"INFO","msg":"created new stream","id":"amgls2ha"}
+{"time":"2025-04-27T22:05:21.262965273Z","level":"INFO","msg":"stream: started","id":"amgls2ha"}
+{"time":"2025-04-27T22:05:21.263069199Z","level":"INFO","msg":"writer: Do: started","stream_id":"amgls2ha"}
+{"time":"2025-04-27T22:05:21.263328364Z","level":"INFO","msg":"handler: started","stream_id":"amgls2ha"}
+{"time":"2025-04-27T22:05:21.263375566Z","level":"INFO","msg":"sender: started","stream_id":"amgls2ha"}
+{"time":"2025-04-27T22:05:21.424189286Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-27T22:05:23.146421382Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:05:23.464246557Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:05:23.475754586Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:05:25.505601509Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:05:25.569288974Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-27T22:05:25.569374751Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-27T22:05:25.865671525Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-27T22:05:25.965927057Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-27T22:05:25.974295354Z","level":"INFO","msg":"stream: closing","id":"amgls2ha"}
+{"time":"2025-04-27T22:05:25.974335087Z","level":"INFO","msg":"handler: closed","stream_id":"amgls2ha"}
+{"time":"2025-04-27T22:05:25.974352293Z","level":"INFO","msg":"writer: Close: closed","stream_id":"amgls2ha"}
+{"time":"2025-04-27T22:05:25.974418197Z","level":"INFO","msg":"sender: closed","stream_id":"amgls2ha"}
+{"time":"2025-04-27T22:05:25.97447715Z","level":"INFO","msg":"stream: closed","id":"amgls2ha"}

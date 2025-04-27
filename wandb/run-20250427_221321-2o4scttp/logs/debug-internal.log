@@ -1,0 +1,20 @@
+{"time":"2025-04-27T22:13:21.803405589Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250427_221321-2o4scttp/logs/debug-core.log"}
+{"time":"2025-04-27T22:13:21.956373353Z","level":"INFO","msg":"created new stream","id":"2o4scttp"}
+{"time":"2025-04-27T22:13:21.956437316Z","level":"INFO","msg":"stream: started","id":"2o4scttp"}
+{"time":"2025-04-27T22:13:21.956517409Z","level":"INFO","msg":"writer: Do: started","stream_id":"2o4scttp"}
+{"time":"2025-04-27T22:13:21.956576702Z","level":"INFO","msg":"sender: started","stream_id":"2o4scttp"}
+{"time":"2025-04-27T22:13:21.956638519Z","level":"INFO","msg":"handler: started","stream_id":"2o4scttp"}
+{"time":"2025-04-27T22:13:22.110956538Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-27T22:14:15.959115134Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:14:16.877681997Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:14:16.888892233Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-27T22:14:17.194613026Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-27T22:14:17.338380241Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-27T22:14:17.338467245Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-27T22:14:17.711039005Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-27T22:14:17.826087738Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-27T22:14:17.845458404Z","level":"INFO","msg":"stream: closing","id":"2o4scttp"}
+{"time":"2025-04-27T22:14:17.845480937Z","level":"INFO","msg":"handler: closed","stream_id":"2o4scttp"}
+{"time":"2025-04-27T22:14:17.845497423Z","level":"INFO","msg":"writer: Close: closed","stream_id":"2o4scttp"}
+{"time":"2025-04-27T22:14:17.845622224Z","level":"INFO","msg":"sender: closed","stream_id":"2o4scttp"}
+{"time":"2025-04-27T22:14:17.845641914Z","level":"INFO","msg":"stream: closed","id":"2o4scttp"}
