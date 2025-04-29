@@ -1,0 +1,7 @@
+{"time":"2025-04-29T15:59:45.039949217Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250429_155944-rlp388pc/logs/debug-core.log"}
+{"time":"2025-04-29T15:59:45.202446045Z","level":"INFO","msg":"created new stream","id":"rlp388pc"}
+{"time":"2025-04-29T15:59:45.202490484Z","level":"INFO","msg":"stream: started","id":"rlp388pc"}
+{"time":"2025-04-29T15:59:45.20259592Z","level":"INFO","msg":"handler: started","stream_id":"rlp388pc"}
+{"time":"2025-04-29T15:59:45.202636595Z","level":"INFO","msg":"writer: Do: started","stream_id":"rlp388pc"}
+{"time":"2025-04-29T15:59:45.202674993Z","level":"INFO","msg":"sender: started","stream_id":"rlp388pc"}
+{"time":"2025-04-29T15:59:45.367831342Z","level":"INFO","msg":"Starting system monitor"}

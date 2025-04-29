@@ -1,0 +1,46 @@
+{"time":"2025-04-29T18:25:11.390976944Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250429_182511-nz19kagp/logs/debug-core.log"}
+{"time":"2025-04-29T18:25:11.56120148Z","level":"INFO","msg":"created new stream","id":"nz19kagp"}
+{"time":"2025-04-29T18:25:11.561426059Z","level":"INFO","msg":"stream: started","id":"nz19kagp"}
+{"time":"2025-04-29T18:25:11.561500367Z","level":"INFO","msg":"writer: Do: started","stream_id":"nz19kagp"}
+{"time":"2025-04-29T18:25:11.561553214Z","level":"INFO","msg":"sender: started","stream_id":"nz19kagp"}
+{"time":"2025-04-29T18:25:11.561937968Z","level":"INFO","msg":"handler: started","stream_id":"nz19kagp"}
+{"time":"2025-04-29T18:25:11.750067409Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-29T18:25:16.249783598Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:26.101685341Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:26.141976444Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:29.264929364Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:29.276918923Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:29.873614607Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:29.888396371Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:34.21759263Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:34.257926494Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:35.794579937Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:35.804713521Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:36.20315321Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:36.212443931Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:36.821193264Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:36.832254596Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:37.111221695Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:37.124864081Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:48.652038682Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:48.693121212Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:49.018791773Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:49.028735205Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:49.317517372Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:49.32868565Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:27:49.57648832Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:27:49.588488164Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:28:02.802195771Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:28:02.842995968Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:28:10.22892828Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:28:10.238947243Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T18:28:11.456435938Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T18:28:11.532665846Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-29T18:28:11.53285478Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-29T18:28:11.943314439Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-29T18:28:12.051327861Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-29T18:28:12.067216885Z","level":"INFO","msg":"stream: closing","id":"nz19kagp"}
+{"time":"2025-04-29T18:28:12.067247603Z","level":"INFO","msg":"handler: closed","stream_id":"nz19kagp"}
+{"time":"2025-04-29T18:28:12.067308627Z","level":"INFO","msg":"writer: Close: closed","stream_id":"nz19kagp"}
+{"time":"2025-04-29T18:28:12.067419034Z","level":"INFO","msg":"sender: closed","stream_id":"nz19kagp"}
+{"time":"2025-04-29T18:28:12.067520691Z","level":"INFO","msg":"stream: closed","id":"nz19kagp"}

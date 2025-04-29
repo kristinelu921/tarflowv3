@@ -1,0 +1,22 @@
+{"time":"2025-04-29T14:25:34.511328248Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250429_142534-i1o43gav/logs/debug-core.log"}
+{"time":"2025-04-29T14:25:34.675712366Z","level":"INFO","msg":"created new stream","id":"i1o43gav"}
+{"time":"2025-04-29T14:25:34.675749675Z","level":"INFO","msg":"stream: started","id":"i1o43gav"}
+{"time":"2025-04-29T14:25:34.675912605Z","level":"INFO","msg":"writer: Do: started","stream_id":"i1o43gav"}
+{"time":"2025-04-29T14:25:34.676033148Z","level":"INFO","msg":"handler: started","stream_id":"i1o43gav"}
+{"time":"2025-04-29T14:25:34.676174064Z","level":"INFO","msg":"sender: started","stream_id":"i1o43gav"}
+{"time":"2025-04-29T14:25:34.895948012Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-29T14:25:52.314314159Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T14:28:23.114198103Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T14:28:23.120126301Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T14:28:23.915233235Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T14:28:23.917458026Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T14:28:28.627919083Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T14:28:28.69422975Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-29T14:28:28.694442163Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-29T14:28:29.160776309Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-29T14:28:29.261650439Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-29T14:28:29.271357814Z","level":"INFO","msg":"stream: closing","id":"i1o43gav"}
+{"time":"2025-04-29T14:28:29.271383846Z","level":"INFO","msg":"handler: closed","stream_id":"i1o43gav"}
+{"time":"2025-04-29T14:28:29.271395974Z","level":"INFO","msg":"writer: Close: closed","stream_id":"i1o43gav"}
+{"time":"2025-04-29T14:28:29.271440674Z","level":"INFO","msg":"sender: closed","stream_id":"i1o43gav"}
+{"time":"2025-04-29T14:28:29.271491582Z","level":"INFO","msg":"stream: closed","id":"i1o43gav"}

@@ -1,0 +1,8 @@
+{"time":"2025-04-29T14:04:08.19372293Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250429_140408-h9hm474x/logs/debug-core.log"}
+{"time":"2025-04-29T14:04:08.355461539Z","level":"INFO","msg":"created new stream","id":"h9hm474x"}
+{"time":"2025-04-29T14:04:08.355565576Z","level":"INFO","msg":"stream: started","id":"h9hm474x"}
+{"time":"2025-04-29T14:04:08.355634719Z","level":"INFO","msg":"writer: Do: started","stream_id":"h9hm474x"}
+{"time":"2025-04-29T14:04:08.355703677Z","level":"INFO","msg":"handler: started","stream_id":"h9hm474x"}
+{"time":"2025-04-29T14:04:08.3557524Z","level":"INFO","msg":"sender: started","stream_id":"h9hm474x"}
+{"time":"2025-04-29T14:04:08.536847202Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-29T14:04:09.801141769Z","level":"INFO","msg":"Pausing system monitor"}

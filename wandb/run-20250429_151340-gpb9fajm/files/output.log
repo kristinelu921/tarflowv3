@@ -1,0 +1,10 @@
+Using device:  cuda (NVIDIA H100 80GB HBM3)
+Epochs:   0%|          | 0/100 [00:00<?, ?it/s]
+                                                         
+logdet loss tensor(-0., device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0561, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 0/235, Loss: 0.0561, LR: 0.0000400128
+logdet loss tensor(-0.0076, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0591, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 1/235, Loss: 0.0515, LR: 0.0000400256
+logdet loss tensor(-0.0163, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0580, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 2/235, Loss: 0.0417, LR: 0.0000400385
+device cuda

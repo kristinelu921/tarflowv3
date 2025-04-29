@@ -1,0 +1,18 @@
+Using device:  cuda (NVIDIA H100 80GB HBM3)
+Epochs:   0%|          | 0/100 [00:00<?, ?it/s]
+                                                         
+z_t size torch.Size([256, 49, 128])
+y emb size torch.Size([256, 1, 128])
+z_t size torch.Size([256, 49, 128])
+y emb size torch.Size([256, 1, 128])
+z_t size torch.Size([256, 49, 128])
+y emb size torch.Size([256, 1, 128])
+z_t size torch.Size([256, 49, 128])
+y emb size torch.Size([256, 1, 128])
+logdet loss tensor(-0., device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.0577, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 0/235, Loss: 0.0577, LR: 0.0000400128
+z_t size torch.Size([256, 49, 128])
+y emb size torch.Size([256, 1, 128])
+z_t size torch.Size([256, 49, 128])
+y emb size torch.Size([128, 1, 128])
+device cuda

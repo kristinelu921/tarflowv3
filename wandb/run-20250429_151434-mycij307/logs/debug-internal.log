@@ -1,0 +1,26 @@
+{"time":"2025-04-29T15:14:35.437861673Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/user/kristine/wandb/run-20250429_151434-mycij307/logs/debug-core.log"}
+{"time":"2025-04-29T15:14:35.586659745Z","level":"INFO","msg":"created new stream","id":"mycij307"}
+{"time":"2025-04-29T15:14:35.586706712Z","level":"INFO","msg":"stream: started","id":"mycij307"}
+{"time":"2025-04-29T15:14:35.586776484Z","level":"INFO","msg":"writer: Do: started","stream_id":"mycij307"}
+{"time":"2025-04-29T15:14:35.586839593Z","level":"INFO","msg":"handler: started","stream_id":"mycij307"}
+{"time":"2025-04-29T15:14:35.586804403Z","level":"INFO","msg":"sender: started","stream_id":"mycij307"}
+{"time":"2025-04-29T15:14:35.764688929Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-29T15:14:37.610076865Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T15:15:47.299240611Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T15:15:47.339835161Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T15:15:48.163126856Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T15:15:48.170730012Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T15:15:48.392204245Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T15:15:48.400482455Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T15:15:49.782177623Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T15:15:49.79529049Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-29T15:15:51.068055738Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-29T15:15:51.132452742Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-29T15:15:51.13254262Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-29T15:15:51.91717157Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-29T15:15:52.059856573Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-29T15:15:52.067712924Z","level":"INFO","msg":"stream: closing","id":"mycij307"}
+{"time":"2025-04-29T15:15:52.067753438Z","level":"INFO","msg":"handler: closed","stream_id":"mycij307"}
+{"time":"2025-04-29T15:15:52.067774237Z","level":"INFO","msg":"writer: Close: closed","stream_id":"mycij307"}
+{"time":"2025-04-29T15:15:52.06782107Z","level":"INFO","msg":"sender: closed","stream_id":"mycij307"}
+{"time":"2025-04-29T15:15:52.06790393Z","level":"INFO","msg":"stream: closed","id":"mycij307"}

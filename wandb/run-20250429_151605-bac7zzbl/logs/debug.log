@@ -1,0 +1,49 @@
+2025-04-29 15:16:05,278 INFO    MainThread:2981899 [wandb_init.py:setup_run_log_directory():662] Logging user logs to /home/user/kristine/wandb/run-20250429_151605-bac7zzbl/logs/debug.log
+2025-04-29 15:16:05,278 INFO    MainThread:2981899 [wandb_init.py:setup_run_log_directory():663] Logging internal logs to /home/user/kristine/wandb/run-20250429_151605-bac7zzbl/logs/debug-internal.log
+2025-04-29 15:16:05,278 INFO    MainThread:2981899 [wandb_init.py:monkeypatch_ipython():581] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x75e7df74e210>
+2025-04-29 15:16:05,278 INFO    MainThread:2981899 [wandb_init.py:init():781] calling init triggers
+2025-04-29 15:16:05,278 INFO    MainThread:2981899 [wandb_init.py:init():786] wandb.init called with sweep_config: {}
+config: {'learning_rate_min': 4e-05, 'learning_rate_max': 0.0001, 'batch_size': 256, 'epochs': 100, 'weight_decay': 0.0001, 'n_flow_steps': 4, 'n_layers': 4, 'd_model': 128, 'n_heads': 4, 'patch_size': 4, 'img_size': 28, 'warmup_steps': 4680.0, 'total_training_steps': 23400, 'architecture': 'Tarflow', '_wandb': {}}
+2025-04-29 15:16:05,278 INFO    MainThread:2981899 [wandb_init.py:init():798] finishing previous run: wwaqgnyz
+2025-04-29 15:16:12,080 WARNING MainThread:2981899 [wandb_init.py:init():1534] [no run ID] interrupted
+Traceback (most recent call last):
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_init.py", line 1530, in init
+    return wi.init(run_settings, run_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_init.py", line 799, in init
+    wandb.run.finish()
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 387, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 483, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 2182, in finish
+    return self._finish(exit_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 387, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 2204, in _finish
+    self._atexit_cleanup(exit_code=exit_code)
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 2431, in _atexit_cleanup
+    self._on_finish()
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/wandb_run.py", line 2690, in _on_finish
+    wait_with_progress(
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 87, in wait_all_with_progress
+    return asyncio_compat.run(progress_loop_with_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.local/lib/python3.12/site-packages/wandb/sdk/lib/asyncio_compat.py", line 30, in run
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "/opt/anaconda3/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
