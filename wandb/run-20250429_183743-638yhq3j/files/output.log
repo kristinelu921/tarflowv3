@@ -449,3 +449,852 @@ logdet loss tensor(-2.2074, device='cuda:0', grad_fn=<NegBackward0>) prior loss 
   Batch 222/235, Loss: -1.7119, LR: 0.0000428590
 logdet loss tensor(-2.2039, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4864, device='cuda:0', grad_fn=<MulBackward0>)
   Batch 223/235, Loss: -1.7175, LR: 0.0000428718
+logdet loss tensor(-2.2018, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4822, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 224/235, Loss: -1.7196, LR: 0.0000428846
+logdet loss tensor(-2.2365, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5101, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 225/235, Loss: -1.7264, LR: 0.0000428974
+logdet loss tensor(-2.2029, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4870, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 226/235, Loss: -1.7159, LR: 0.0000429103
+logdet loss tensor(-2.1999, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4908, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 227/235, Loss: -1.7090, LR: 0.0000429231
+logdet loss tensor(-2.2092, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4861, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 228/235, Loss: -1.7231, LR: 0.0000429359
+logdet loss tensor(-2.2296, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5046, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 229/235, Loss: -1.7250, LR: 0.0000429487
+logdet loss tensor(-2.2016, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4857, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 230/235, Loss: -1.7159, LR: 0.0000429615
+logdet loss tensor(-2.2038, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4857, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 231/235, Loss: -1.7181, LR: 0.0000429744
+logdet loss tensor(-2.2344, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5042, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 232/235, Loss: -1.7302, LR: 0.0000429872
+logdet loss tensor(-2.2152, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4869, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 233/235, Loss: -1.7283, LR: 0.0000430000
+logdet loss tensor(-2.2024, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4664, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 234/235, Loss: -1.7360, LR: 0.0000430128
+Epoch 1/100 loss: -1.116
+logdet loss tensor(-2.2408, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5142, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 0/235, Loss: -1.7265, LR: 0.0000430256
+logdet loss tensor(-2.2366, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5038, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 1/235, Loss: -1.7328, LR: 0.0000430385
+logdet loss tensor(-2.2255, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4784, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 2/235, Loss: -1.7471, LR: 0.0000430513
+logdet loss tensor(-2.2183, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4890, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 3/235, Loss: -1.7292, LR: 0.0000430641
+logdet loss tensor(-2.2370, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4918, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 4/235, Loss: -1.7452, LR: 0.0000430769
+logdet loss tensor(-2.2472, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5044, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 5/235, Loss: -1.7428, LR: 0.0000430897
+logdet loss tensor(-2.2345, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5017, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 6/235, Loss: -1.7328, LR: 0.0000431026
+logdet loss tensor(-2.2206, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4897, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 7/235, Loss: -1.7310, LR: 0.0000431154
+logdet loss tensor(-2.2303, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4821, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 8/235, Loss: -1.7482, LR: 0.0000431282
+logdet loss tensor(-2.2383, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4912, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 9/235, Loss: -1.7471, LR: 0.0000431410
+logdet loss tensor(-2.2710, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5167, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 10/235, Loss: -1.7543, LR: 0.0000431538
+logdet loss tensor(-2.2414, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4915, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 11/235, Loss: -1.7499, LR: 0.0000431667
+logdet loss tensor(-2.2317, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4738, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 12/235, Loss: -1.7579, LR: 0.0000431795
+logdet loss tensor(-2.2346, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4885, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 13/235, Loss: -1.7462, LR: 0.0000431923
+logdet loss tensor(-2.2629, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5029, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 14/235, Loss: -1.7600, LR: 0.0000432051
+logdet loss tensor(-2.2508, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4919, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 15/235, Loss: -1.7589, LR: 0.0000432179
+logdet loss tensor(-2.2352, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4859, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 16/235, Loss: -1.7493, LR: 0.0000432308
+logdet loss tensor(-2.2284, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4794, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 17/235, Loss: -1.7490, LR: 0.0000432436
+logdet loss tensor(-2.2416, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4964, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 18/235, Loss: -1.7451, LR: 0.0000432564
+logdet loss tensor(-2.2531, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4989, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 19/235, Loss: -1.7541, LR: 0.0000432692
+logdet loss tensor(-2.2482, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4846, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 20/235, Loss: -1.7636, LR: 0.0000432821
+logdet loss tensor(-2.2602, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4938, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 21/235, Loss: -1.7664, LR: 0.0000432949
+logdet loss tensor(-2.2264, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4861, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 22/235, Loss: -1.7403, LR: 0.0000433077
+logdet loss tensor(-2.2400, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4850, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 23/235, Loss: -1.7550, LR: 0.0000433205
+logdet loss tensor(-2.2726, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5066, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 24/235, Loss: -1.7660, LR: 0.0000433333
+logdet loss tensor(-2.2625, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5055, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 25/235, Loss: -1.7570, LR: 0.0000433462
+logdet loss tensor(-2.2401, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4841, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 26/235, Loss: -1.7560, LR: 0.0000433590
+logdet loss tensor(-2.2352, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4757, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 27/235, Loss: -1.7596, LR: 0.0000433718
+logdet loss tensor(-2.2621, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5100, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 28/235, Loss: -1.7521, LR: 0.0000433846
+logdet loss tensor(-2.2589, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4985, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 29/235, Loss: -1.7603, LR: 0.0000433974
+logdet loss tensor(-2.2597, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4843, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 30/235, Loss: -1.7754, LR: 0.0000434103
+logdet loss tensor(-2.2410, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4866, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 31/235, Loss: -1.7544, LR: 0.0000434231
+logdet loss tensor(-2.2567, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4925, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 32/235, Loss: -1.7643, LR: 0.0000434359
+logdet loss tensor(-2.2399, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4968, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 33/235, Loss: -1.7430, LR: 0.0000434487
+logdet loss tensor(-2.2651, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4930, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 34/235, Loss: -1.7721, LR: 0.0000434615
+logdet loss tensor(-2.2379, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4818, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 35/235, Loss: -1.7560, LR: 0.0000434744
+logdet loss tensor(-2.2549, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4849, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 36/235, Loss: -1.7700, LR: 0.0000434872
+logdet loss tensor(-2.2515, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4882, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 37/235, Loss: -1.7634, LR: 0.0000435000
+logdet loss tensor(-2.2643, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4955, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 38/235, Loss: -1.7688, LR: 0.0000435128
+logdet loss tensor(-2.2613, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4908, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 39/235, Loss: -1.7704, LR: 0.0000435256
+logdet loss tensor(-2.2633, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4989, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 40/235, Loss: -1.7644, LR: 0.0000435385
+logdet loss tensor(-2.2702, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4920, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 41/235, Loss: -1.7782, LR: 0.0000435513
+logdet loss tensor(-2.2740, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4922, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 42/235, Loss: -1.7818, LR: 0.0000435641
+logdet loss tensor(-2.2871, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5112, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 43/235, Loss: -1.7759, LR: 0.0000435769
+logdet loss tensor(-2.2527, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4911, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 44/235, Loss: -1.7616, LR: 0.0000435897
+logdet loss tensor(-2.2367, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4780, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 45/235, Loss: -1.7587, LR: 0.0000436026
+logdet loss tensor(-2.2652, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4846, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 46/235, Loss: -1.7806, LR: 0.0000436154
+logdet loss tensor(-2.2851, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4958, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 47/235, Loss: -1.7893, LR: 0.0000436282
+logdet loss tensor(-2.2584, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4855, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 48/235, Loss: -1.7729, LR: 0.0000436410
+logdet loss tensor(-2.2616, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4799, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 49/235, Loss: -1.7817, LR: 0.0000436538
+logdet loss tensor(-2.2725, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4991, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 50/235, Loss: -1.7734, LR: 0.0000436667
+logdet loss tensor(-2.2657, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4959, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 51/235, Loss: -1.7698, LR: 0.0000436795
+logdet loss tensor(-2.2589, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4864, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 52/235, Loss: -1.7726, LR: 0.0000436923
+logdet loss tensor(-2.2696, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4875, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 53/235, Loss: -1.7820, LR: 0.0000437051
+logdet loss tensor(-2.2592, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4973, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 54/235, Loss: -1.7619, LR: 0.0000437179
+logdet loss tensor(-2.2726, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4996, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 55/235, Loss: -1.7730, LR: 0.0000437308
+logdet loss tensor(-2.2662, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4890, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 56/235, Loss: -1.7771, LR: 0.0000437436
+logdet loss tensor(-2.2697, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4826, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 57/235, Loss: -1.7871, LR: 0.0000437564
+logdet loss tensor(-2.2587, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4814, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 58/235, Loss: -1.7773, LR: 0.0000437692
+logdet loss tensor(-2.2787, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5004, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 59/235, Loss: -1.7783, LR: 0.0000437821
+logdet loss tensor(-2.2813, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5037, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 60/235, Loss: -1.7776, LR: 0.0000437949
+logdet loss tensor(-2.2605, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4763, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 61/235, Loss: -1.7842, LR: 0.0000438077
+logdet loss tensor(-2.2766, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4854, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 62/235, Loss: -1.7911, LR: 0.0000438205
+logdet loss tensor(-2.3024, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5037, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 63/235, Loss: -1.7987, LR: 0.0000438333
+logdet loss tensor(-2.2939, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4966, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 64/235, Loss: -1.7973, LR: 0.0000438462
+logdet loss tensor(-2.2803, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4881, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 65/235, Loss: -1.7921, LR: 0.0000438590
+logdet loss tensor(-2.2728, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4845, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 66/235, Loss: -1.7883, LR: 0.0000438718
+logdet loss tensor(-2.2790, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5009, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 67/235, Loss: -1.7781, LR: 0.0000438846
+logdet loss tensor(-2.2799, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4941, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 68/235, Loss: -1.7858, LR: 0.0000438974
+logdet loss tensor(-2.2740, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4789, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 69/235, Loss: -1.7950, LR: 0.0000439103
+logdet loss tensor(-2.2823, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4807, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 70/235, Loss: -1.8016, LR: 0.0000439231
+logdet loss tensor(-2.2924, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4907, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 71/235, Loss: -1.8017, LR: 0.0000439359
+logdet loss tensor(-2.2914, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5018, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 72/235, Loss: -1.7895, LR: 0.0000439487
+logdet loss tensor(-2.2716, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4920, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 73/235, Loss: -1.7796, LR: 0.0000439615
+logdet loss tensor(-2.2676, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4869, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 74/235, Loss: -1.7808, LR: 0.0000439744
+logdet loss tensor(-2.2873, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5000, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 75/235, Loss: -1.7874, LR: 0.0000439872
+logdet loss tensor(-2.2984, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4988, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 76/235, Loss: -1.7996, LR: 0.0000440000
+logdet loss tensor(-2.2860, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4967, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 77/235, Loss: -1.7893, LR: 0.0000440128
+logdet loss tensor(-2.2735, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4840, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 78/235, Loss: -1.7896, LR: 0.0000440256
+logdet loss tensor(-2.2756, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4883, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 79/235, Loss: -1.7874, LR: 0.0000440385
+logdet loss tensor(-2.2894, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4909, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 80/235, Loss: -1.7986, LR: 0.0000440513
+logdet loss tensor(-2.3025, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4891, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 81/235, Loss: -1.8134, LR: 0.0000440641
+logdet loss tensor(-2.3070, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4908, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 82/235, Loss: -1.8162, LR: 0.0000440769
+logdet loss tensor(-2.2850, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4884, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 83/235, Loss: -1.7966, LR: 0.0000440897
+logdet loss tensor(-2.2871, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4924, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 84/235, Loss: -1.7947, LR: 0.0000441026
+logdet loss tensor(-2.2806, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4958, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 85/235, Loss: -1.7848, LR: 0.0000441154
+logdet loss tensor(-2.2990, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4923, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 86/235, Loss: -1.8067, LR: 0.0000441282
+logdet loss tensor(-2.2868, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4863, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 87/235, Loss: -1.8004, LR: 0.0000441410
+logdet loss tensor(-2.2920, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4898, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 88/235, Loss: -1.8021, LR: 0.0000441538
+logdet loss tensor(-2.3288, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5080, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 89/235, Loss: -1.8208, LR: 0.0000441667
+logdet loss tensor(-2.2846, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4855, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 90/235, Loss: -1.7991, LR: 0.0000441795
+logdet loss tensor(-2.2858, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4747, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 91/235, Loss: -1.8112, LR: 0.0000441923
+logdet loss tensor(-2.2989, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4957, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 92/235, Loss: -1.8032, LR: 0.0000442051
+logdet loss tensor(-2.2920, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5075, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 93/235, Loss: -1.7845, LR: 0.0000442179
+logdet loss tensor(-2.2987, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4956, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 94/235, Loss: -1.8032, LR: 0.0000442308
+logdet loss tensor(-2.2909, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4805, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 95/235, Loss: -1.8104, LR: 0.0000442436
+logdet loss tensor(-2.2789, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4843, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 96/235, Loss: -1.7946, LR: 0.0000442564
+logdet loss tensor(-2.2872, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4960, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 97/235, Loss: -1.7912, LR: 0.0000442692
+logdet loss tensor(-2.3131, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4981, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 98/235, Loss: -1.8150, LR: 0.0000442821
+logdet loss tensor(-2.2918, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4799, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 99/235, Loss: -1.8119, LR: 0.0000442949
+logdet loss tensor(-2.2861, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4820, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 100/235, Loss: -1.8041, LR: 0.0000443077
+logdet loss tensor(-2.2966, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4777, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 101/235, Loss: -1.8189, LR: 0.0000443205
+logdet loss tensor(-2.3136, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5072, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 102/235, Loss: -1.8064, LR: 0.0000443333
+logdet loss tensor(-2.3142, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5016, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 103/235, Loss: -1.8127, LR: 0.0000443462
+logdet loss tensor(-2.3105, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4855, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 104/235, Loss: -1.8250, LR: 0.0000443590
+logdet loss tensor(-2.2880, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4831, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 105/235, Loss: -1.8049, LR: 0.0000443718
+logdet loss tensor(-2.3071, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4940, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 106/235, Loss: -1.8131, LR: 0.0000443846
+logdet loss tensor(-2.3123, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5021, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 107/235, Loss: -1.8103, LR: 0.0000443974
+logdet loss tensor(-2.3075, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5000, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 108/235, Loss: -1.8074, LR: 0.0000444103
+logdet loss tensor(-2.3005, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4805, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 109/235, Loss: -1.8200, LR: 0.0000444231
+logdet loss tensor(-2.2884, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4770, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 110/235, Loss: -1.8114, LR: 0.0000444359
+logdet loss tensor(-2.3035, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4977, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 111/235, Loss: -1.8058, LR: 0.0000444487
+logdet loss tensor(-2.3153, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5010, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 112/235, Loss: -1.8143, LR: 0.0000444615
+logdet loss tensor(-2.3099, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4890, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 113/235, Loss: -1.8210, LR: 0.0000444744
+logdet loss tensor(-2.3070, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4841, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 114/235, Loss: -1.8229, LR: 0.0000444872
+logdet loss tensor(-2.2931, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4937, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 115/235, Loss: -1.7995, LR: 0.0000445000
+logdet loss tensor(-2.3186, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4905, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 116/235, Loss: -1.8281, LR: 0.0000445128
+logdet loss tensor(-2.3062, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4882, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 117/235, Loss: -1.8181, LR: 0.0000445256
+logdet loss tensor(-2.3043, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4921, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 118/235, Loss: -1.8121, LR: 0.0000445385
+logdet loss tensor(-2.3204, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4908, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 119/235, Loss: -1.8296, LR: 0.0000445513
+logdet loss tensor(-2.3024, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4896, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 120/235, Loss: -1.8128, LR: 0.0000445641
+logdet loss tensor(-2.3088, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4865, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 121/235, Loss: -1.8223, LR: 0.0000445769
+logdet loss tensor(-2.3049, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4991, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 122/235, Loss: -1.8059, LR: 0.0000445897
+logdet loss tensor(-2.3041, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4977, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 123/235, Loss: -1.8064, LR: 0.0000446026
+logdet loss tensor(-2.3150, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4933, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 124/235, Loss: -1.8217, LR: 0.0000446154
+logdet loss tensor(-2.2943, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4810, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 125/235, Loss: -1.8133, LR: 0.0000446282
+logdet loss tensor(-2.3163, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4873, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 126/235, Loss: -1.8291, LR: 0.0000446410
+logdet loss tensor(-2.3320, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4967, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 127/235, Loss: -1.8353, LR: 0.0000446538
+logdet loss tensor(-2.3160, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4921, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 128/235, Loss: -1.8239, LR: 0.0000446667
+logdet loss tensor(-2.3139, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4849, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 129/235, Loss: -1.8290, LR: 0.0000446795
+logdet loss tensor(-2.3109, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4878, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 130/235, Loss: -1.8231, LR: 0.0000446923
+logdet loss tensor(-2.3175, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4941, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 131/235, Loss: -1.8234, LR: 0.0000447051
+logdet loss tensor(-2.3327, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5018, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 132/235, Loss: -1.8309, LR: 0.0000447179
+logdet loss tensor(-2.3067, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4892, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 133/235, Loss: -1.8176, LR: 0.0000447308
+logdet loss tensor(-2.3150, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4881, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 134/235, Loss: -1.8269, LR: 0.0000447436
+logdet loss tensor(-2.3129, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4872, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 135/235, Loss: -1.8256, LR: 0.0000447564
+logdet loss tensor(-2.3188, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4891, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 136/235, Loss: -1.8297, LR: 0.0000447692
+logdet loss tensor(-2.3227, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4970, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 137/235, Loss: -1.8257, LR: 0.0000447821
+logdet loss tensor(-2.3223, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5000, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 138/235, Loss: -1.8223, LR: 0.0000447949
+logdet loss tensor(-2.3177, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4912, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 139/235, Loss: -1.8264, LR: 0.0000448077
+logdet loss tensor(-2.3078, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4762, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 140/235, Loss: -1.8316, LR: 0.0000448205
+logdet loss tensor(-2.3169, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4888, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 141/235, Loss: -1.8281, LR: 0.0000448333
+logdet loss tensor(-2.3267, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5078, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 142/235, Loss: -1.8189, LR: 0.0000448462
+logdet loss tensor(-2.3275, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4925, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 143/235, Loss: -1.8350, LR: 0.0000448590
+logdet loss tensor(-2.3186, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4831, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 144/235, Loss: -1.8355, LR: 0.0000448718
+logdet loss tensor(-2.3191, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4855, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 145/235, Loss: -1.8336, LR: 0.0000448846
+logdet loss tensor(-2.3247, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4878, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 146/235, Loss: -1.8369, LR: 0.0000448974
+logdet loss tensor(-2.3292, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4998, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 147/235, Loss: -1.8294, LR: 0.0000449103
+logdet loss tensor(-2.3258, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5016, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 148/235, Loss: -1.8243, LR: 0.0000449231
+logdet loss tensor(-2.3168, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4863, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 149/235, Loss: -1.8304, LR: 0.0000449359
+logdet loss tensor(-2.2972, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4729, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 150/235, Loss: -1.8243, LR: 0.0000449487
+logdet loss tensor(-2.3184, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4853, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 151/235, Loss: -1.8330, LR: 0.0000449615
+logdet loss tensor(-2.3207, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5077, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 152/235, Loss: -1.8130, LR: 0.0000449744
+logdet loss tensor(-2.3311, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4959, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 153/235, Loss: -1.8352, LR: 0.0000449872
+logdet loss tensor(-2.3260, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4898, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 154/235, Loss: -1.8362, LR: 0.0000450000
+logdet loss tensor(-2.3097, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4818, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 155/235, Loss: -1.8278, LR: 0.0000450128
+logdet loss tensor(-2.3201, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4901, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 156/235, Loss: -1.8300, LR: 0.0000450256
+logdet loss tensor(-2.3188, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4957, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 157/235, Loss: -1.8231, LR: 0.0000450385
+logdet loss tensor(-2.3185, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4870, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 158/235, Loss: -1.8316, LR: 0.0000450513
+logdet loss tensor(-2.3398, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4897, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 159/235, Loss: -1.8501, LR: 0.0000450641
+logdet loss tensor(-2.3292, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4984, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 160/235, Loss: -1.8309, LR: 0.0000450769
+logdet loss tensor(-2.3301, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4970, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 161/235, Loss: -1.8331, LR: 0.0000450897
+logdet loss tensor(-2.3283, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4924, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 162/235, Loss: -1.8359, LR: 0.0000451026
+logdet loss tensor(-2.3317, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4884, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 163/235, Loss: -1.8433, LR: 0.0000451154
+logdet loss tensor(-2.3287, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4870, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 164/235, Loss: -1.8417, LR: 0.0000451282
+logdet loss tensor(-2.3224, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4821, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 165/235, Loss: -1.8403, LR: 0.0000451410
+logdet loss tensor(-2.3257, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4878, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 166/235, Loss: -1.8379, LR: 0.0000451538
+logdet loss tensor(-2.3377, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4987, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 167/235, Loss: -1.8390, LR: 0.0000451667
+logdet loss tensor(-2.3534, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5047, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 168/235, Loss: -1.8487, LR: 0.0000451795
+logdet loss tensor(-2.3494, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4923, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 169/235, Loss: -1.8571, LR: 0.0000451923
+logdet loss tensor(-2.3184, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4875, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 170/235, Loss: -1.8309, LR: 0.0000452051
+logdet loss tensor(-2.3128, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4748, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 171/235, Loss: -1.8380, LR: 0.0000452179
+logdet loss tensor(-2.3459, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4851, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 172/235, Loss: -1.8608, LR: 0.0000452308
+logdet loss tensor(-2.3616, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5001, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 173/235, Loss: -1.8615, LR: 0.0000452436
+logdet loss tensor(-2.3311, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4976, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 174/235, Loss: -1.8335, LR: 0.0000452564
+logdet loss tensor(-2.3439, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4943, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 175/235, Loss: -1.8496, LR: 0.0000452692
+logdet loss tensor(-2.3353, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4875, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 176/235, Loss: -1.8478, LR: 0.0000452821
+logdet loss tensor(-2.3483, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4916, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 177/235, Loss: -1.8567, LR: 0.0000452949
+logdet loss tensor(-2.3323, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4876, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 178/235, Loss: -1.8447, LR: 0.0000453077
+logdet loss tensor(-2.3413, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4924, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 179/235, Loss: -1.8489, LR: 0.0000453205
+logdet loss tensor(-2.3232, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4826, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 180/235, Loss: -1.8406, LR: 0.0000453333
+logdet loss tensor(-2.3316, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4865, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 181/235, Loss: -1.8451, LR: 0.0000453462
+logdet loss tensor(-2.3541, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5035, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 182/235, Loss: -1.8506, LR: 0.0000453590
+logdet loss tensor(-2.3436, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4982, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 183/235, Loss: -1.8454, LR: 0.0000453718
+logdet loss tensor(-2.3395, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4870, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 184/235, Loss: -1.8525, LR: 0.0000453846
+logdet loss tensor(-2.3350, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4897, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 185/235, Loss: -1.8453, LR: 0.0000453974
+logdet loss tensor(-2.3347, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4949, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 186/235, Loss: -1.8398, LR: 0.0000454103
+logdet loss tensor(-2.3317, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4876, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 187/235, Loss: -1.8441, LR: 0.0000454231
+logdet loss tensor(-2.3316, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4843, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 188/235, Loss: -1.8473, LR: 0.0000454359
+logdet loss tensor(-2.3324, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4876, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 189/235, Loss: -1.8448, LR: 0.0000454487
+logdet loss tensor(-2.3516, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4974, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 190/235, Loss: -1.8542, LR: 0.0000454615
+logdet loss tensor(-2.3598, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4998, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 191/235, Loss: -1.8601, LR: 0.0000454744
+logdet loss tensor(-2.3418, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4912, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 192/235, Loss: -1.8506, LR: 0.0000454872
+logdet loss tensor(-2.3269, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4824, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 193/235, Loss: -1.8444, LR: 0.0000455000
+logdet loss tensor(-2.3371, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4879, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 194/235, Loss: -1.8492, LR: 0.0000455128
+logdet loss tensor(-2.3496, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4911, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 195/235, Loss: -1.8585, LR: 0.0000455256
+logdet loss tensor(-2.3480, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4958, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 196/235, Loss: -1.8522, LR: 0.0000455385
+logdet loss tensor(-2.3264, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4913, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 197/235, Loss: -1.8351, LR: 0.0000455513
+logdet loss tensor(-2.3539, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4911, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 198/235, Loss: -1.8628, LR: 0.0000455641
+logdet loss tensor(-2.3414, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4976, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 199/235, Loss: -1.8438, LR: 0.0000455769
+logdet loss tensor(-2.3623, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4910, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 200/235, Loss: -1.8713, LR: 0.0000455897
+logdet loss tensor(-2.3384, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4863, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 201/235, Loss: -1.8521, LR: 0.0000456026
+logdet loss tensor(-2.3398, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4800, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 202/235, Loss: -1.8598, LR: 0.0000456154
+logdet loss tensor(-2.3558, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4891, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 203/235, Loss: -1.8666, LR: 0.0000456282
+logdet loss tensor(-2.3581, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4994, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 204/235, Loss: -1.8587, LR: 0.0000456410
+logdet loss tensor(-2.3636, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4996, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 205/235, Loss: -1.8640, LR: 0.0000456538
+logdet loss tensor(-2.3574, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4861, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 206/235, Loss: -1.8712, LR: 0.0000456667
+logdet loss tensor(-2.3420, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4805, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 207/235, Loss: -1.8615, LR: 0.0000456795
+logdet loss tensor(-2.3353, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4912, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 208/235, Loss: -1.8440, LR: 0.0000456923
+logdet loss tensor(-2.3639, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4979, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 209/235, Loss: -1.8660, LR: 0.0000457051
+logdet loss tensor(-2.3515, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5026, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 210/235, Loss: -1.8489, LR: 0.0000457179
+logdet loss tensor(-2.3669, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4918, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 211/235, Loss: -1.8750, LR: 0.0000457308
+logdet loss tensor(-2.3450, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4806, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 212/235, Loss: -1.8644, LR: 0.0000457436
+logdet loss tensor(-2.3426, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4841, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 213/235, Loss: -1.8586, LR: 0.0000457564
+logdet loss tensor(-2.3408, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4902, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 214/235, Loss: -1.8506, LR: 0.0000457692
+logdet loss tensor(-2.3520, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4983, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 215/235, Loss: -1.8537, LR: 0.0000457821
+logdet loss tensor(-2.3559, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4802, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 216/235, Loss: -1.8757, LR: 0.0000457949
+logdet loss tensor(-2.3466, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4889, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 217/235, Loss: -1.8577, LR: 0.0000458077
+logdet loss tensor(-2.3606, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4995, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 218/235, Loss: -1.8611, LR: 0.0000458205
+logdet loss tensor(-2.3551, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4946, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 219/235, Loss: -1.8605, LR: 0.0000458333
+logdet loss tensor(-2.3451, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4883, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 220/235, Loss: -1.8568, LR: 0.0000458462
+logdet loss tensor(-2.3590, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4869, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 221/235, Loss: -1.8720, LR: 0.0000458590
+logdet loss tensor(-2.3619, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4822, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 222/235, Loss: -1.8797, LR: 0.0000458718
+logdet loss tensor(-2.3664, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4964, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 223/235, Loss: -1.8700, LR: 0.0000458846
+logdet loss tensor(-2.3482, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4985, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 224/235, Loss: -1.8497, LR: 0.0000458974
+logdet loss tensor(-2.3633, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4904, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 225/235, Loss: -1.8729, LR: 0.0000459103
+logdet loss tensor(-2.3772, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4922, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 226/235, Loss: -1.8850, LR: 0.0000459231
+logdet loss tensor(-2.3730, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4927, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 227/235, Loss: -1.8803, LR: 0.0000459359
+logdet loss tensor(-2.3697, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4831, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 228/235, Loss: -1.8866, LR: 0.0000459487
+logdet loss tensor(-2.3431, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4814, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 229/235, Loss: -1.8616, LR: 0.0000459615
+logdet loss tensor(-2.3639, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4905, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 230/235, Loss: -1.8734, LR: 0.0000459744
+logdet loss tensor(-2.3711, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4971, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 231/235, Loss: -1.8740, LR: 0.0000459872
+logdet loss tensor(-2.3743, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4986, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 232/235, Loss: -1.8758, LR: 0.0000460000
+logdet loss tensor(-2.3542, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4939, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 233/235, Loss: -1.8603, LR: 0.0000460128
+logdet loss tensor(-2.3552, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4857, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 234/235, Loss: -1.8695, LR: 0.0000460256
+Epoch 2/100 loss: -1.813
+logdet loss tensor(-2.3697, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4914, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 0/235, Loss: -1.8784, LR: 0.0000460385
+logdet loss tensor(-2.3613, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4891, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 1/235, Loss: -1.8722, LR: 0.0000460513
+logdet loss tensor(-2.3714, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4930, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 2/235, Loss: -1.8784, LR: 0.0000460641
+logdet loss tensor(-2.3784, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4926, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 3/235, Loss: -1.8859, LR: 0.0000460769
+logdet loss tensor(-2.3628, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4849, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 4/235, Loss: -1.8780, LR: 0.0000460897
+logdet loss tensor(-2.3715, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4879, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 5/235, Loss: -1.8837, LR: 0.0000461026
+logdet loss tensor(-2.3709, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4840, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 6/235, Loss: -1.8869, LR: 0.0000461154
+logdet loss tensor(-2.3641, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4894, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 7/235, Loss: -1.8746, LR: 0.0000461282
+logdet loss tensor(-2.3784, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4974, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 8/235, Loss: -1.8811, LR: 0.0000461410
+logdet loss tensor(-2.3785, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4999, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 9/235, Loss: -1.8786, LR: 0.0000461538
+logdet loss tensor(-2.3731, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4965, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 10/235, Loss: -1.8766, LR: 0.0000461667
+logdet loss tensor(-2.3633, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4873, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 11/235, Loss: -1.8760, LR: 0.0000461795
+logdet loss tensor(-2.3613, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4786, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 12/235, Loss: -1.8828, LR: 0.0000461923
+logdet loss tensor(-2.3609, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4887, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 13/235, Loss: -1.8722, LR: 0.0000462051
+logdet loss tensor(-2.3816, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4932, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 14/235, Loss: -1.8884, LR: 0.0000462179
+logdet loss tensor(-2.3834, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4911, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 15/235, Loss: -1.8924, LR: 0.0000462308
+logdet loss tensor(-2.3910, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5000, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 16/235, Loss: -1.8910, LR: 0.0000462436
+logdet loss tensor(-2.3807, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4923, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 17/235, Loss: -1.8884, LR: 0.0000462564
+logdet loss tensor(-2.3677, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4853, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 18/235, Loss: -1.8823, LR: 0.0000462692
+logdet loss tensor(-2.3670, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4861, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 19/235, Loss: -1.8809, LR: 0.0000462821
+logdet loss tensor(-2.3686, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4870, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 20/235, Loss: -1.8817, LR: 0.0000462949
+logdet loss tensor(-2.3731, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4825, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 21/235, Loss: -1.8907, LR: 0.0000463077
+logdet loss tensor(-2.3835, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4953, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 22/235, Loss: -1.8882, LR: 0.0000463205
+logdet loss tensor(-2.3746, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4926, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 23/235, Loss: -1.8820, LR: 0.0000463333
+logdet loss tensor(-2.3964, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5009, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 24/235, Loss: -1.8955, LR: 0.0000463462
+logdet loss tensor(-2.3843, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4883, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 25/235, Loss: -1.8960, LR: 0.0000463590
+logdet loss tensor(-2.3841, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4844, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 26/235, Loss: -1.8997, LR: 0.0000463718
+logdet loss tensor(-2.3880, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4944, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 27/235, Loss: -1.8936, LR: 0.0000463846
+logdet loss tensor(-2.3799, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4837, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 28/235, Loss: -1.8962, LR: 0.0000463974
+logdet loss tensor(-2.3853, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4913, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 29/235, Loss: -1.8940, LR: 0.0000464103
+logdet loss tensor(-2.3850, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4943, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 30/235, Loss: -1.8907, LR: 0.0000464231
+logdet loss tensor(-2.3926, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4943, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 31/235, Loss: -1.8983, LR: 0.0000464359
+logdet loss tensor(-2.4035, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4910, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 32/235, Loss: -1.9125, LR: 0.0000464487
+logdet loss tensor(-2.3788, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4850, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 33/235, Loss: -1.8938, LR: 0.0000464615
+logdet loss tensor(-2.3732, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4836, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 34/235, Loss: -1.8896, LR: 0.0000464744
+logdet loss tensor(-2.3964, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4899, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 35/235, Loss: -1.9065, LR: 0.0000464872
+logdet loss tensor(-2.3859, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4990, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 36/235, Loss: -1.8869, LR: 0.0000465000
+logdet loss tensor(-2.3891, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4881, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 37/235, Loss: -1.9010, LR: 0.0000465128
+logdet loss tensor(-2.3820, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4840, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 38/235, Loss: -1.8980, LR: 0.0000465256
+logdet loss tensor(-2.3960, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4903, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 39/235, Loss: -1.9057, LR: 0.0000465385
+logdet loss tensor(-2.3953, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4959, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 40/235, Loss: -1.8994, LR: 0.0000465513
+logdet loss tensor(-2.3914, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4979, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 41/235, Loss: -1.8935, LR: 0.0000465641
+logdet loss tensor(-2.3936, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4944, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 42/235, Loss: -1.8992, LR: 0.0000465769
+logdet loss tensor(-2.3916, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4853, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 43/235, Loss: -1.9063, LR: 0.0000465897
+logdet loss tensor(-2.3801, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4793, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 44/235, Loss: -1.9008, LR: 0.0000466026
+logdet loss tensor(-2.3842, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4895, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 45/235, Loss: -1.8947, LR: 0.0000466154
+logdet loss tensor(-2.3805, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4886, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 46/235, Loss: -1.8918, LR: 0.0000466282
+logdet loss tensor(-2.3935, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4888, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 47/235, Loss: -1.9047, LR: 0.0000466410
+logdet loss tensor(-2.3851, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4930, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 48/235, Loss: -1.8922, LR: 0.0000466538
+logdet loss tensor(-2.4008, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4990, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 49/235, Loss: -1.9018, LR: 0.0000466667
+logdet loss tensor(-2.3996, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4954, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 50/235, Loss: -1.9041, LR: 0.0000466795
+logdet loss tensor(-2.3928, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4874, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 51/235, Loss: -1.9053, LR: 0.0000466923
+logdet loss tensor(-2.3826, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4793, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 52/235, Loss: -1.9033, LR: 0.0000467051
+logdet loss tensor(-2.3906, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4904, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 53/235, Loss: -1.9002, LR: 0.0000467179
+logdet loss tensor(-2.3882, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4875, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 54/235, Loss: -1.9008, LR: 0.0000467308
+logdet loss tensor(-2.3994, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4979, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 55/235, Loss: -1.9015, LR: 0.0000467436
+logdet loss tensor(-2.4014, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4878, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 56/235, Loss: -1.9137, LR: 0.0000467564
+logdet loss tensor(-2.4148, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4944, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 57/235, Loss: -1.9204, LR: 0.0000467692
+logdet loss tensor(-2.3884, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4933, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 58/235, Loss: -1.8951, LR: 0.0000467821
+logdet loss tensor(-2.3935, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4905, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 59/235, Loss: -1.9030, LR: 0.0000467949
+logdet loss tensor(-2.3867, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4859, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 60/235, Loss: -1.9007, LR: 0.0000468077
+logdet loss tensor(-2.4000, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4938, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 61/235, Loss: -1.9062, LR: 0.0000468205
+logdet loss tensor(-2.3906, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4865, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 62/235, Loss: -1.9041, LR: 0.0000468333
+logdet loss tensor(-2.3889, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4875, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 63/235, Loss: -1.9015, LR: 0.0000468462
+logdet loss tensor(-2.4127, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4884, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 64/235, Loss: -1.9244, LR: 0.0000468590
+logdet loss tensor(-2.3998, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4891, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 65/235, Loss: -1.9107, LR: 0.0000468718
+logdet loss tensor(-2.4015, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4976, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 66/235, Loss: -1.9039, LR: 0.0000468846
+logdet loss tensor(-2.4071, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4857, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 67/235, Loss: -1.9214, LR: 0.0000468974
+logdet loss tensor(-2.4022, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4890, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 68/235, Loss: -1.9131, LR: 0.0000469103
+logdet loss tensor(-2.4001, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4932, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 69/235, Loss: -1.9070, LR: 0.0000469231
+logdet loss tensor(-2.3992, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4908, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 70/235, Loss: -1.9084, LR: 0.0000469359
+logdet loss tensor(-2.3941, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4815, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 71/235, Loss: -1.9126, LR: 0.0000469487
+logdet loss tensor(-2.3929, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4945, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 72/235, Loss: -1.8984, LR: 0.0000469615
+logdet loss tensor(-2.4177, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5028, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 73/235, Loss: -1.9149, LR: 0.0000469744
+logdet loss tensor(-2.4018, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4925, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 74/235, Loss: -1.9093, LR: 0.0000469872
+logdet loss tensor(-2.3888, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4853, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 75/235, Loss: -1.9035, LR: 0.0000470000
+logdet loss tensor(-2.3965, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4917, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 76/235, Loss: -1.9048, LR: 0.0000470128
+logdet loss tensor(-2.4087, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4796, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 77/235, Loss: -1.9291, LR: 0.0000470256
+logdet loss tensor(-2.3865, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4793, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 78/235, Loss: -1.9072, LR: 0.0000470385
+logdet loss tensor(-2.4090, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4943, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 79/235, Loss: -1.9147, LR: 0.0000470513
+logdet loss tensor(-2.4223, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5002, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 80/235, Loss: -1.9221, LR: 0.0000470641
+logdet loss tensor(-2.4246, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5000, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 81/235, Loss: -1.9245, LR: 0.0000470769
+logdet loss tensor(-2.4229, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4945, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 82/235, Loss: -1.9283, LR: 0.0000470897
+logdet loss tensor(-2.4012, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4846, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 83/235, Loss: -1.9166, LR: 0.0000471026
+logdet loss tensor(-2.4050, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4944, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 84/235, Loss: -1.9106, LR: 0.0000471154
+logdet loss tensor(-2.4023, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4796, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 85/235, Loss: -1.9227, LR: 0.0000471282
+logdet loss tensor(-2.3994, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4842, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 86/235, Loss: -1.9152, LR: 0.0000471410
+logdet loss tensor(-2.3970, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4835, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 87/235, Loss: -1.9135, LR: 0.0000471538
+logdet loss tensor(-2.4214, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4928, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 88/235, Loss: -1.9286, LR: 0.0000471667
+logdet loss tensor(-2.4069, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4964, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 89/235, Loss: -1.9105, LR: 0.0000471795
+logdet loss tensor(-2.4171, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4889, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 90/235, Loss: -1.9282, LR: 0.0000471923
+logdet loss tensor(-2.4149, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4931, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 91/235, Loss: -1.9218, LR: 0.0000472051
+logdet loss tensor(-2.3996, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4902, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 92/235, Loss: -1.9094, LR: 0.0000472179
+logdet loss tensor(-2.4157, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4870, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 93/235, Loss: -1.9287, LR: 0.0000472308
+logdet loss tensor(-2.4092, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4932, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 94/235, Loss: -1.9159, LR: 0.0000472436
+logdet loss tensor(-2.4041, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4858, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 95/235, Loss: -1.9184, LR: 0.0000472564
+logdet loss tensor(-2.4140, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4827, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 96/235, Loss: -1.9313, LR: 0.0000472692
+logdet loss tensor(-2.4160, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4906, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 97/235, Loss: -1.9253, LR: 0.0000472821
+logdet loss tensor(-2.4071, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4919, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 98/235, Loss: -1.9152, LR: 0.0000472949
+logdet loss tensor(-2.4177, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4927, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 99/235, Loss: -1.9249, LR: 0.0000473077
+logdet loss tensor(-2.4287, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4992, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 100/235, Loss: -1.9295, LR: 0.0000473205
+logdet loss tensor(-2.4165, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4994, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 101/235, Loss: -1.9171, LR: 0.0000473333
+logdet loss tensor(-2.4170, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4866, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 102/235, Loss: -1.9304, LR: 0.0000473462
+logdet loss tensor(-2.4027, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4835, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 103/235, Loss: -1.9192, LR: 0.0000473590
+logdet loss tensor(-2.4003, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4860, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 104/235, Loss: -1.9143, LR: 0.0000473718
+logdet loss tensor(-2.4064, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4825, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 105/235, Loss: -1.9240, LR: 0.0000473846
+logdet loss tensor(-2.4085, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4879, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 106/235, Loss: -1.9206, LR: 0.0000473974
+logdet loss tensor(-2.4420, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4998, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 107/235, Loss: -1.9422, LR: 0.0000474103
+logdet loss tensor(-2.4237, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4957, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 108/235, Loss: -1.9280, LR: 0.0000474231
+logdet loss tensor(-2.4041, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4909, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 109/235, Loss: -1.9132, LR: 0.0000474359
+logdet loss tensor(-2.4158, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4918, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 110/235, Loss: -1.9240, LR: 0.0000474487
+logdet loss tensor(-2.4122, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4803, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 111/235, Loss: -1.9319, LR: 0.0000474615
+logdet loss tensor(-2.4191, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4822, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 112/235, Loss: -1.9369, LR: 0.0000474744
+logdet loss tensor(-2.4120, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4972, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 113/235, Loss: -1.9147, LR: 0.0000474872
+logdet loss tensor(-2.4252, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4918, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 114/235, Loss: -1.9333, LR: 0.0000475000
+logdet loss tensor(-2.4372, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4962, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 115/235, Loss: -1.9411, LR: 0.0000475128
+logdet loss tensor(-2.4258, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4925, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 116/235, Loss: -1.9332, LR: 0.0000475256
+logdet loss tensor(-2.4150, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4906, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 117/235, Loss: -1.9244, LR: 0.0000475385
+logdet loss tensor(-2.4121, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4809, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 118/235, Loss: -1.9312, LR: 0.0000475513
+logdet loss tensor(-2.4076, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4890, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 119/235, Loss: -1.9187, LR: 0.0000475641
+logdet loss tensor(-2.4151, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4878, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 120/235, Loss: -1.9272, LR: 0.0000475769
+logdet loss tensor(-2.4336, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4902, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 121/235, Loss: -1.9433, LR: 0.0000475897
+logdet loss tensor(-2.4139, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4866, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 122/235, Loss: -1.9272, LR: 0.0000476026
+logdet loss tensor(-2.4060, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4841, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 123/235, Loss: -1.9219, LR: 0.0000476154
+logdet loss tensor(-2.4262, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4982, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 124/235, Loss: -1.9280, LR: 0.0000476282
+logdet loss tensor(-2.4283, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4988, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 125/235, Loss: -1.9294, LR: 0.0000476410
+logdet loss tensor(-2.4277, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4867, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 126/235, Loss: -1.9410, LR: 0.0000476538
+logdet loss tensor(-2.4192, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4900, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 127/235, Loss: -1.9292, LR: 0.0000476667
+logdet loss tensor(-2.4231, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4895, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 128/235, Loss: -1.9335, LR: 0.0000476795
+logdet loss tensor(-2.4240, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4840, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 129/235, Loss: -1.9400, LR: 0.0000476923
+logdet loss tensor(-2.4216, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4958, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 130/235, Loss: -1.9258, LR: 0.0000477051
+logdet loss tensor(-2.4315, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4934, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 131/235, Loss: -1.9380, LR: 0.0000477179
+logdet loss tensor(-2.4319, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4905, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 132/235, Loss: -1.9415, LR: 0.0000477308
+logdet loss tensor(-2.4275, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4928, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 133/235, Loss: -1.9347, LR: 0.0000477436
+logdet loss tensor(-2.4086, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4803, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 134/235, Loss: -1.9283, LR: 0.0000477564
+logdet loss tensor(-2.4206, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4894, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 135/235, Loss: -1.9311, LR: 0.0000477692
+logdet loss tensor(-2.4178, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4905, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 136/235, Loss: -1.9273, LR: 0.0000477821
+logdet loss tensor(-2.4228, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4847, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 137/235, Loss: -1.9381, LR: 0.0000477949
+logdet loss tensor(-2.4273, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4911, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 138/235, Loss: -1.9362, LR: 0.0000478077
+logdet loss tensor(-2.4301, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4975, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 139/235, Loss: -1.9325, LR: 0.0000478205
+logdet loss tensor(-2.4297, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4982, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 140/235, Loss: -1.9315, LR: 0.0000478333
+logdet loss tensor(-2.4258, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4880, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 141/235, Loss: -1.9378, LR: 0.0000478462
+logdet loss tensor(-2.3983, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4787, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 142/235, Loss: -1.9196, LR: 0.0000478590
+logdet loss tensor(-2.4162, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4872, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 143/235, Loss: -1.9290, LR: 0.0000478718
+logdet loss tensor(-2.4444, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4902, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 144/235, Loss: -1.9542, LR: 0.0000478846
+logdet loss tensor(-2.4339, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4941, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 145/235, Loss: -1.9398, LR: 0.0000478974
+logdet loss tensor(-2.4274, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4951, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 146/235, Loss: -1.9322, LR: 0.0000479103
+logdet loss tensor(-2.4195, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4863, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 147/235, Loss: -1.9332, LR: 0.0000479231
+logdet loss tensor(-2.4377, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4904, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 148/235, Loss: -1.9473, LR: 0.0000479359
+logdet loss tensor(-2.4280, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4936, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 149/235, Loss: -1.9344, LR: 0.0000479487
+logdet loss tensor(-2.4233, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4891, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 150/235, Loss: -1.9342, LR: 0.0000479615
+logdet loss tensor(-2.4245, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4881, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 151/235, Loss: -1.9364, LR: 0.0000479744
+logdet loss tensor(-2.4375, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4919, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 152/235, Loss: -1.9456, LR: 0.0000479872
+logdet loss tensor(-2.4418, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4913, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 153/235, Loss: -1.9505, LR: 0.0000480000
+logdet loss tensor(-2.4195, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4865, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 154/235, Loss: -1.9330, LR: 0.0000480128
+logdet loss tensor(-2.4278, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4886, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 155/235, Loss: -1.9393, LR: 0.0000480256
+logdet loss tensor(-2.4324, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4909, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 156/235, Loss: -1.9415, LR: 0.0000480385
+logdet loss tensor(-2.4467, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4966, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 157/235, Loss: -1.9501, LR: 0.0000480513
+logdet loss tensor(-2.4241, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4902, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 158/235, Loss: -1.9339, LR: 0.0000480641
+logdet loss tensor(-2.4339, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4876, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 159/235, Loss: -1.9463, LR: 0.0000480769
+logdet loss tensor(-2.4163, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4804, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 160/235, Loss: -1.9359, LR: 0.0000480897
+logdet loss tensor(-2.4375, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4872, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 161/235, Loss: -1.9503, LR: 0.0000481026
+logdet loss tensor(-2.4593, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5015, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 162/235, Loss: -1.9578, LR: 0.0000481154
+logdet loss tensor(-2.4386, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4915, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 163/235, Loss: -1.9471, LR: 0.0000481282
+logdet loss tensor(-2.4306, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4874, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 164/235, Loss: -1.9432, LR: 0.0000481410
+logdet loss tensor(-2.4378, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4905, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 165/235, Loss: -1.9473, LR: 0.0000481538
+logdet loss tensor(-2.4351, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4915, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 166/235, Loss: -1.9437, LR: 0.0000481667
+logdet loss tensor(-2.4409, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4905, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 167/235, Loss: -1.9504, LR: 0.0000481795
+logdet loss tensor(-2.4310, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4880, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 168/235, Loss: -1.9429, LR: 0.0000481923
+logdet loss tensor(-2.4252, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4877, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 169/235, Loss: -1.9374, LR: 0.0000482051
+logdet loss tensor(-2.4250, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4835, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 170/235, Loss: -1.9415, LR: 0.0000482179
+logdet loss tensor(-2.4429, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4937, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 171/235, Loss: -1.9492, LR: 0.0000482308
+logdet loss tensor(-2.4364, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.5020, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 172/235, Loss: -1.9345, LR: 0.0000482436
+logdet loss tensor(-2.4365, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4882, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 173/235, Loss: -1.9484, LR: 0.0000482564
+logdet loss tensor(-2.4223, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4810, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 174/235, Loss: -1.9412, LR: 0.0000482692
+logdet loss tensor(-2.4292, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4882, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 175/235, Loss: -1.9410, LR: 0.0000482821
+logdet loss tensor(-2.4465, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4944, device='cuda:0', grad_fn=<MulBackward0>)
+  Batch 176/235, Loss: -1.9520, LR: 0.0000482949
+logdet loss tensor(-2.4536, device='cuda:0', grad_fn=<NegBackward0>) prior loss tensor(0.4938, device='cuda:0', grad_fn=<MulBackward0>)

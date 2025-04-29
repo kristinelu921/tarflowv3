@@ -5,3 +5,4 @@
 {"time":"2025-04-29T18:37:44.680540315Z","level":"INFO","msg":"handler: started","stream_id":"638yhq3j"}
 {"time":"2025-04-29T18:37:44.680633633Z","level":"INFO","msg":"sender: started","stream_id":"638yhq3j"}
 {"time":"2025-04-29T18:37:44.836582541Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-29T18:39:45.418103497Z","level":"INFO","msg":"Pausing system monitor"}

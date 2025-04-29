@@ -18,3 +18,5 @@ config: {'learning_rate_min': 4e-05, 'learning_rate_max': 0.0001, 'batch_size': 
 2025-04-29 18:37:45,103 INFO    MainThread:2985898 [wandb_run.py:_redirect():2371] Wrapping output streams.
 2025-04-29 18:37:45,103 INFO    MainThread:2985898 [wandb_run.py:_redirect():2394] Redirects installed.
 2025-04-29 18:37:45,106 INFO    MainThread:2985898 [wandb_init.py:init():1056] run started, returning control to user process
+2025-04-29 18:39:45,417 INFO    MainThread:2985898 [jupyter.py:save_ipynb():384] [no run ID] not saving jupyter notebook
+2025-04-29 18:39:45,417 INFO    MainThread:2985898 [wandb_init.py:_pause_backend():546] [no run ID] pausing backend
