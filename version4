@@ -33,6 +33,7 @@ class Config:
     #AttentionHead
     n_heads = 4
     d_head = d_model//n_heads
+    temp = 0.4
 
     #Training
     epochs = 100
@@ -61,12 +62,13 @@ class Config:
 
     #evaluation
     evaluate = False
-    n_classes = 10
 
     #guidance
-    guidance_on = False
+    guidance_on = True
+    n_classes = 10
+    guide_weight = 3
 
-      import torch
+import torch
 import torch.nn as nn
 import numpy as np
 
@@ -80,7 +82,7 @@ class LayerNorm(nn.Module):
         super().__init__()
         self.cfg = cfg
         self.w = nn.Parameter(torch.ones(cfg.d_model))
-        
+
         self.b = nn.Parameter(torch.zeros(cfg.d_model))
 
     def forward(self, residual):
@@ -88,6 +90,9 @@ class LayerNorm(nn.Module):
         residual_std = (residual.var(dim = -1, keepdim = True, unbiased = False) + self.cfg.layer_norm_eps).sqrt()
 
         residual = (residual - residual_mean) / residual_std
+        #print("residual", residual.size())
+        #print("w", self.w.size())
+        #print("b", self.b.size())
         return residual * self.w + self.b
 
 class PatchEmbed(nn.Module):
@@ -174,7 +179,7 @@ class AttentionHead(nn.Module):
     Output: Attention output: (bsize patch dmodel)
     Performs one attention head
     """
-    def __init__(self, cfg: Config, cache = False):
+    def __init__(self, cfg: Config):
         super().__init__()
 
         self.query = nn.Linear(cfg.d_model, cfg.d_head)
@@ -182,24 +187,49 @@ class AttentionHead(nn.Module):
         self.value = nn.Linear(cfg.d_model, cfg.d_head)
         self.output = nn.Linear(cfg.d_head, cfg.d_model)
         self.cfg = cfg
-        self.cache = cache #if True, use KV cache
         self.register_buffer("IGNORE", torch.tensor(-float('inf')))
         self.temp  = 1.0 #guidance in 2.6
-        self.kcache = []
-        self.vcache = []
+        self.cond_cache = {"key": [], "value": []}
+        self.uncond_cache = {"key": [], "value": []}
 
-    def forward(self, embeddings, temp = None):  #bsize patch dmodel (embeddings)
+    def forward(self, embeddings, cache):  #bsize patch dmodel (embeddings)
+
         """
         Takes in embeddings: (bsize patch dmodel)
         """
 
-        temp = temp if temp is not None else self.temp
+        temp = self.cfg.temp
 
         # Calculate query, key and value vectors
         Q = self.query(embeddings)  #bsize patch dmodel -> bsize patch dhead
         K = self.key(embeddings) #bsize patch dmodel -> bsize patch dhead
         V = self.value(embeddings) #bsize patch dmodel -> bsize patch dhead
+
+        if cache == "cond":
+            self.cond_cache["key"].append(K)
+            self.cond_cache["value"].append(V)
+            K = torch.cat(self.cond_cache["key"], dim = 1)
+            V = torch.cat(self.cond_cache["value"], dim = 1)
+            #print("Q size", Q.size())
+            #print("K size", K.size())
+
+            attn_scores = Q @ K.transpose(-1, -2) # -> bsize patch_q patch_k
+            attn_scores_scaled = attn_scores / self.cfg.d_head**0.5
+            attn_out = attn_scores.softmax(-1) @ V #bsize patch_q dhead
+            return attn_out
         
+        elif cache == "uncond":
+            self.uncond_cache["key"].append(K)
+            self.uncond_cache["value"].append(V)
+            K = torch.cat(self.uncond_cache["key"], dim = 1)
+            V = torch.cat(self.uncond_cache["value"], dim = 1)
+
+            attn_scores = Q @ K.transpose(-1, -2) # -> bsize patch_q patch_k
+            attn_scores_scaled = attn_scores / self.cfg.d_head**0.5 / temp
+            attn_out = attn_scores.softmax(-1) @ V #bsize patch_q dhead
+            return attn_out
+
+
 
         # Calculate attention scores, then scale and mask, and apply softmax to get probabilities
         attn_scores = Q @ K.transpose(-1, -2) # -> bsize patch_q patch_k
@@ -212,12 +242,6 @@ class AttentionHead(nn.Module):
             attn_pattern = attn_scores.softmax(-1)
 
         attn_out = attn_pattern @ V #bsize patch_q dhead
-
-        if self.cache:
-            self.kcache.append(K) #b-size patch dmodel 
-            self.vcache.append(V) #b-size patch dmodel
-            K = torch.cat(self.kcache, dim = 2) #b-size patch dmodel * # tokens
-            V = torch.cat(self.vcache, dim = 2) #b-size patch dmodel * # tokens
 
         return attn_out
 
@@ -250,8 +274,8 @@ class MultiHeadAttention(nn.Module):
         #pass each through one attn head to get attn scores
         self.heads = nn.ModuleList([AttentionHead(cfg) for _ in range(self.n_heads)])
 
-    def forward(self, embeddings): #B, patches, d_model
-        out = torch.cat([head(embeddings) for head in self.heads], dim = -1)
+    def forward(self, embeddings, cache): #B, patches, d_model
+        out = torch.cat([head(embeddings, cache = cache) for head in self.heads], dim = -1)
         out = self.W_o(out) #B, patches, d_model
         return out
 
@@ -275,8 +299,8 @@ class TransformerEncoder(nn.Module):
             nn.Linear(cfg.d_model*cfg.r_mlp, cfg.d_model)
         )
 
-    def forward(self, embeddings):
-        out = embeddings + self.mha(self.ln1(embeddings))
+    def forward(self, embeddings, cache):
+        out = embeddings + self.mha(self.ln1(embeddings), cache)
         #out = self.dropout(out)
         out = out + self.mlp(self.ln2(out))
         return out
@@ -298,7 +322,7 @@ class PermutationIdentity(Permutation):
 class PermutationFlip(Permutation):
     def forward(self, x):
         return torch.flip(x, dims = [1])
-    
+
 
 
 class TransformerFlowBlock(nn.Module):
@@ -313,6 +337,7 @@ class TransformerFlowBlock(nn.Module):
         super().__init__()
         self.block_id = block_id
         cfg.mask = True
+        self.cfg = cfg
 
 
         assert cfg.img_size % cfg.patch_size == 0  #assume working with square patches
@@ -321,6 +346,7 @@ class TransformerFlowBlock(nn.Module):
         self.transformer_encoder = nn.ModuleList([TransformerEncoder(cfg) for _ in range(cfg.n_layers)])
         self.proj_to_model = nn.Linear(cfg.d_patch, cfg.d_model)
         self.proj_to_patch = nn.Linear(cfg.d_model, 2*cfg.d_patch)
+        self.class_embedding = nn.Embedding(cfg.n_classes + 1, cfg.d_model) #+1 for uncond
         torch.nn.init.zeros_(self.proj_to_patch.weight)
         torch.nn.init.zeros_(self.proj_to_patch.bias)
 
@@ -329,39 +355,85 @@ class TransformerFlowBlock(nn.Module):
         self.pos_embed = nn.Parameter(torch.randn(cfg.num_patches, cfg.d_model)*1e-2)
 
 
-    def forward(self, z_t, temp = None, uncond_out = None): #batch_size, num_patches, d_model
+    def forward(self, z_t, y, uncond_out = None): #batch_size, num_patches, d_model
         z_t = self.permutation(z_t)
         z_t_in = z_t
         z_t = self.proj_to_model(z_t) + self.pos_embed
 
-        for layer in self.transformer_encoder:
-            z_t = layer(z_t)
+        if self.cfg.guidance_on:
+            #print("y", y.size())
+            y_emb = self.class_embedding(y).unsqueeze(1).to(z_t.device) #unsqueezing to add patch dimension
+            #print("y_emb", y_emb.size(), "z_t", z_t.size())
 
-        z_t = self.proj_to_patch(z_t) #project back to patch dimension
-        z_t = torch.cat([torch.zeros_like(z_t[:, :1]), z_t[:, :-1]], dim = 1)
-        #this shifts all columns to the right by 1, so that the "next" token is in first col
-        #print("z_t size", z_t.size())
-        alpha, mu = z_t.chunk(2, dim = -1)
-        #print("mu, alpha size", mu.size())
+            z_t = z_t + y_emb
+
+            for layer in self.transformer_encoder:
+                z_t = layer(z_t, cache = "None")
+
+            z_t = self.proj_to_patch(z_t)
+
+            z_t = torch.cat([torch.zeros_like(z_t[:, :1]), z_t[:, :-1]], dim = 1)
+
+            alpha, mu = z_t.chunk(2, dim = -1)
+
+        else:
+            for layer in self.transformer_encoder:
+                z_t = layer(z_t, cache = "None")
+
+            z_t = self.proj_to_patch(z_t) #project back to patch dimension
+            z_t = torch.cat([torch.zeros_like(z_t[:, :1]), z_t[:, :-1]], dim = 1)
+            alpha, mu = z_t.chunk(2, dim = -1)
 
         z_t1 = (z_t_in - mu)* torch.exp(-alpha)
         return self.permutation(z_t1), -alpha.mean() #next, alpha is log det
 
-    def get_reverse_transform(self, z_t1, i): #i is the ith-patch, we only need the transformer weights of ith patch
+    def get_reverse_transform(self, z_t1, y, i): #i is the ith-patch, we only need the transformer weights of ith patch
         z_t1 = z_t1[:, i:i+1] #getting the ith patch (batch size, 1, d_patch)
+        #print("z_t1 at top of function", z_t1.size())
         z_t1 = self.proj_to_model(z_t1) + self.pos_embed[i: i+1] #(batch_size, 1, d_model)
+            
+        if self.cfg.guidance_on:
+            if y is None:
+                null_emb = torch.full((self.cfg.num_samples,), self.cfg.n_classes).to(z_t1.device)
+                y_emb = self.class_embedding(null_emb).unsqueeze(1).to(z_t1.device)
+            else:
+                null_emb = torch.full((self.cfg.num_samples,), self.cfg.n_classes).to(z_t1.device)
+                y_emb = self.class_embedding(y).unsqueeze(1).to(z_t1.device)
+            #print("y_emb", y_emb.size())
+            #print("z_t1", z_t1.size())
+            z_t1 = z_t1 + y_emb
+            z_t1_null = z_t1 + self.class_embedding(null_emb).unsqueeze(1).to(z_t1.device)
+            #print("z_t1", z_t1.size())
+            for layer in self.transformer_encoder:
+                z_t1 = layer(z_t1, cache = "cond")
+                z_t1_null = layer(z_t1_null, cache = "uncond")
 
-        for block in self.transformer_encoder:
-            z_t1 = block(z_t1) #(batch_size, 1, d_model)
+            new_z_t1 = z_t1
+            #print("newz_t1 right before", z_t1.size())
 
-        z_t1 = self.proj_to_patch(z_t1) #(batch_size, 1, d_patch)
+            z_t1 = self.proj_to_patch(new_z_t1)
+            z_t1_null = self.proj_to_patch(z_t1_null)
+
+            alpha, mu = z_t1.chunk(2, dim = -1)
+            alpha_null, mu_null = z_t1_null.chunk(2, dim = -1)
+
+            alpha = (1 + self.cfg.guide_weight) * alpha - self.cfg.guide_weight * alpha_null
+            mu = mu + self.cfg.guide_weight * (mu_null - mu)
+                
+        else:
+            #print("z_t1", z_t1.size())
+
+            for block in self.transformer_encoder:
+                z_t1 = block(z_t1, cache = "uncond") #(batch_size, 1, d_model)
+        
+            z_t1 = self.proj_to_patch(z_t1) #(batch_size, 1, d_patch)
         alpha, mu = z_t1.chunk(2, dim = -1) #(batch_size, 1, d_patch/2)
         return alpha, mu
 
-    def reverse(self, z_t1): #i is the ith patch
+    def reverse(self, z_t1, y): #i is the ith patch
         z_t1 = self.permutation(z_t1) #(batch_size, num_patches, d_patch)
         for i in range(z_t1.size(1) - 1):
-            alpha, mu = self.get_reverse_transform(z_t1, i) #(batch size, 1, d_patch/2)
+            alpha, mu = self.get_reverse_transform(z_t1, y, i) #(batch size, 1, d_patch/2)
             scale = alpha[:, 0] #(batch_size, d_patch/2) #removes seq dimension
             z_t1[:, i+1] = (z_t1[:, i+1]) * torch.exp(scale) + mu[:, 0] #(batch_size, d_patch) * (batch_size, d_patch/2)
         return self.permutation(z_t1)
@@ -381,13 +453,13 @@ class Tarflow(nn.Module):
         permutations = [PermutationIdentity(), PermutationFlip()]
         self.transformer_flow_blocks = nn.ModuleList([TransformerFlowBlock(cfg, block_id = i, permutation = permutations[i%2]) for i in range(cfg.n_flow_steps)])
 
-    def encode(self, images):
+    def encode(self, images, y):
         log_dets = torch.zeros((), device = images.device) #the logdet of each flowstep
         outputs = [] #all the outputs of each flowstep
         x = self.patch_embedding(images)
         for i in range(len(self.transformer_flow_blocks)):
             block = self.transformer_flow_blocks[i]
-            x, logdet = block(x)
+            x, logdet = block(x, y)
             log_dets = log_dets + logdet
             outputs.append(x)
 
@@ -403,13 +475,14 @@ class Tarflow(nn.Module):
         print("logdet loss", logdet_loss, "prior loss", prior_loss)
         return logdet_loss, prior_loss, prior_loss + logdet_loss
 
-    def decode(self, z, temp=1.0):
+    def decode(self, z, y = None):
         for block in reversed(self.transformer_flow_blocks):
-            z = block.reverse(z)
+            z = block.reverse(z, y)
         z = self.patch_embedding.reverse(z)
         return z
 
-          import torch
+
+import torch
 import torchvision.transforms as T
 from torch.optim import AdamW
 from torchvision.datasets.mnist import MNIST
@@ -444,7 +517,7 @@ def log_noise(noise):
     wandb.log({
         "noise": [wandb.Image(img) for img in noise[:8].cuda()],
     })
-  
+
 def log_epoch(reconstructed_images, epoch, step = 2):
     """Log epoch to wandb"""
     if epoch % step == 0:
@@ -466,7 +539,7 @@ cfg = Config()
 def train_model(model, config): #mnist trainer
 
   cfg  = config
-  run = init_wandb(cfg)        
+  run = init_wandb(cfg)
   img_size = (cfg.img_size, cfg.img_size)
   batch_size = cfg.batch_size
   epochs = cfg.epochs
@@ -478,10 +551,10 @@ def train_model(model, config): #mnist trainer
   ])
 
   train_set = MNIST(
-    root="./../datasets", train=True, download=True, transform=transform
+    root="./../kristine/datasets", train=True, download=True, transform=transform
   )
   test_set = MNIST(
-    root="./../datasets", train=False, download=True, transform=transform
+    root="./../kristine/datasets", train=False, download=True, transform=transform
   )
 
   train_loader = DataLoader(train_set, shuffle=True, batch_size=batch_size)
@@ -523,12 +596,12 @@ def train_model(model, config): #mnist trainer
     model.train()
     training_loss = 0.0
     for i, data in enumerate(tqdm(train_loader, desc="Training", leave=False), 0):
-        inputs, _ = data
+        inputs, labels = data
         inputs = inputs.to(device)
-
+        labels = labels.to(device)
         optimizer.zero_grad()
 
-        outputs, alphas, log_dets = my_model.encode(inputs)
+        outputs, alphas, log_dets = my_model.encode(inputs, labels)
         logdet_loss, gaussian_loss, loss = loss_fn(outputs, log_dets)
         loss.backward()
         optimizer.step()
@@ -549,14 +622,17 @@ def train_model(model, config): #mnist trainer
     model.eval()
 
     with torch.no_grad():
-        generated_images = model.decode(z)
+        y = torch.full((cfg.num_samples,), 0).to(device)
+        generated_images = model.decode(z, y)
         log_epoch(generated_images, epoch)
 
     cfg = model.cfg
 
 
   with torch.no_grad():
-      generated_images = model.decode(z)
+      
+      y = torch.full((cfg.num_samples,), 0).to(device)
+      generated_images = model.decode(z, y)
 
   final_images(patch_embed.reverse(z), generated_images)
 
@@ -598,7 +674,9 @@ def make_cosine_warmup_lambda(cfg):
     return lr/base_lr
 
   return lr_lambda
-
+  
 
 if __name__ == "__main__":
-  train_model(Tarflow(cfg), cfg)
+  cfg = Config()
+  my_model = Tarflow(cfg)
+  train_model(my_model, cfg)
